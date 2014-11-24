@@ -10,5 +10,6 @@ package Class;
  * Alexis
  */
 public class Anonceur {
-    
+    int mabite = 30;
+    String maquequette = "COUCOU";
 }
