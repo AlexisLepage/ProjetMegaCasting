@@ -10,7 +10,7 @@ package Class;
  * Alexis
  */
 public class Information {
-    private int id_information;
+    private long id_information;
     private String mail_information;
     private int tel_fixe_information;
     private int tel_port_information;
@@ -29,11 +29,11 @@ public class Information {
         this.pays_information = pays_information;
     }
 
-    public int getId_information() {
+    public long getId_information() {
         return id_information;
     }
 
-    public void setId_information(int id_information) {
+    public void setId_information(long id_information) {
         this.id_information = id_information;
     }
 

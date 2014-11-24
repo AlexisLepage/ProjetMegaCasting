@@ -26,7 +26,7 @@ public class Offre {
     private Metier id_metier;
     private Domaine id_domaine;
 
-    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil, Annonceur id_annonceur, Contrat id_contrat, Metier id_metier, Domaine id_domaine) {
+    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil) {
         this.int_offre = int_offre;
         this.ref_offre = ref_offre;
         this.date_offre = date_offre;
@@ -35,10 +35,6 @@ public class Offre {
         this.loc_offre = loc_offre;
         this.desc_poste_offre = desc_poste_offre;
         this.desc_profil = desc_profil;
-        this.id_annonceur = id_annonceur;
-        this.id_contrat = id_contrat;
-        this.id_metier = id_metier;
-        this.id_domaine = id_domaine;
     }
 
     public int getId_offre() {
