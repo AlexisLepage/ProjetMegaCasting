@@ -10,10 +10,10 @@ package Class;
  * Alexis
  */
 public class Domaine_Annonceur {
-    private int id_dommaine;
-    private int id_annonceur;
+    private long id_dommaine;
+    private long id_annonceur;
 
-    public int getId_dommaine() {
+    public long getId_dommaine() {
         return id_dommaine;
     }
 
@@ -21,7 +21,7 @@ public class Domaine_Annonceur {
         this.id_dommaine = id_dommaine;
     }
 
-    public int getId_annonceur() {
+    public long getId_annonceur() {
         return id_annonceur;
     }
 

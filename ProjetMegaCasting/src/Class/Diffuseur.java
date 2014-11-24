@@ -10,11 +10,11 @@ package Class;
  * Alexis
  */
 public class Diffuseur {
-    private int id_diffuseur;
+    private long id_diffuseur;
     private String nom_diffuseur;
     private Information id_information;
 
-    public int getId_diffuseur() {
+    public long getId_diffuseur() {
         return id_diffuseur;
     }
 

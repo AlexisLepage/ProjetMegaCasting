@@ -10,10 +10,10 @@ package Class;
  * Alexis
  */
 public class Contrat {
-    private int id_contrat;
+    private long id_contrat;
     private String lib_contrat;
 
-    public int getId_contrat() {
+    public long getId_contrat() {
         return id_contrat;
     }
 

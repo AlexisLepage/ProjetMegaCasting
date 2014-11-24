@@ -16,6 +16,11 @@ public class Annonceur {
     private String nom_annonceur;
     private Information id_information;
 
+    public Annonceur(String nom_annonceur, Information id_information) {
+        this.nom_annonceur = nom_annonceur;
+        this.id_information = id_information;
+    }
+
     public long getId_anonceur() {
         return id_anonceur;
     }
@@ -40,10 +45,5 @@ public class Annonceur {
         this.id_information = id_information;
     }
 
-    public Annonceur(String nom_annonceur) {
-        this.nom_annonceur = nom_annonceur;
-    }
-     
-   
 }
 

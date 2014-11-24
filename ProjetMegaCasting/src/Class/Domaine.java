@@ -10,10 +10,10 @@ package Class;
  * Alexis
  */
 public class Domaine {
-    private int id_domaine;
+    private long id_domaine;
     private String lib_domaine;
 
-    public int getId_domaine() {
+    public long getId_domaine() {
         return id_domaine;
     }
 
