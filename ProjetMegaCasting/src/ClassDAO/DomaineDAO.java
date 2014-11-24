@@ -4,8 +4,10 @@
  */
 package ClassDAO;
 
+import Class.Annonceur;
 import Class.Contrat;
 import Class.Domaine;
+import Class.Metier;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,8 +27,11 @@ public class DomaineDAO {
         
          try {
              stmt =  cnx.createStatement();
-             stmt.executeUpdate("INSERT INTO domaine (lib_domaine)"                   
-                    + " VALUES (" +dom.getLib_domaine() + "');");
+             stmt.executeUpdate("INSERT INTO domaine (lib_domaine, id_metier, id_ annonceur)"                   
+                    + " VALUES (" +dom.getLib_domaine() 
+                    + ", " + dom.getMetier().getId_metier()
+                    + ", " + dom.getAnnonceur().getId_anonceur()
+                    + "');");
               ResultSet rs = stmt.executeQuery("SELECT Max(id_domaine) FROM domaine");
               if ( rs.next()){
                   long id = rs.getLong(1);
@@ -89,14 +94,19 @@ public class DomaineDAO {
         
          try {
              stmt =  cnx.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine"
+             ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
                     + " FROM domaine;");
             
            while(rs.next()){
                long id_domaine = rs.getInt(1);
-               String lib_domaine = rs.getString(2);                                         
+               String lib_domaine = rs.getString(2); 
+               long id_metier = rs.getInt(3);
+               long id_annonceur = rs.getInt(4);
                
-               Domaine dom = new Domaine(lib_domaine);         
+               Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
+               Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
+              
+               Domaine dom = new Domaine(lib_domaine, met, ann);         
                dom.setId_domaine((int)id_domaine);
                
                liste.add(dom);
@@ -128,8 +138,10 @@ public class DomaineDAO {
     }
      
      
-    private static Domaine TrouverDomaine(Connection cnx, String lib_domaine) {
+    public static Domaine TrouverDomaine(Connection cnx, long id_domaine) {
         Domaine dom = null;
+        Metier met = null;
+        Annonceur ann = null;
         Statement stmt = null;
         
         try {
@@ -137,15 +149,15 @@ public class DomaineDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine"
                     + " FROM domaine"
-                   + " WHERE lib_domaine ='" + lib_domaine + "';");
+                   + " WHERE id_domaine ='" + id_domaine + "';");
             
          if (rs.next()){
                                                       
-               int id_domaine = rs.getInt(1);
+               String lib_domaine = rs.getString(1);
                         
                
-               dom = new Domaine(lib_domaine);
-               dom.setId_domaine(id_domaine);
+               dom = new Domaine(lib_domaine, met, ann);
+               dom.setLib_domaine(lib_domaine);
                }
             
          

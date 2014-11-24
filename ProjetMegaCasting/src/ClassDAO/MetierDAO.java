@@ -20,23 +20,24 @@ import java.util.ArrayList;
  * Alexis
  */
 public class MetierDAO {
-    public static void CreerMetier(Connection cnx, Metier lib) throws Exception{
-            Metier m = TrouverMetier(cnx, lib.getLib_metier());
+    public static void CreerMetier(Connection cnx, Metier met) throws Exception{
+            Metier m = TrouverMetier(cnx, met.getId_metier());
         if(m != null){
-            throw new Exception(lib.getLib_metier() + " existe déjà !");
+            throw new Exception(met.getLib_metier() + " existe déjà !");
         }
         
         Statement stmt = null;
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO metier (lib_metier) "
-                    + "VALUES ('" + lib.getLib_metier()
+            stmt.executeUpdate("INSERT INTO metier (lib_metier, id_domaine) "
+                    + "VALUES ('" + met.getLib_metier()
+                    + ", " + met.getDomaine().getId_domaine() 
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_metier) FROM metier");
             if (rs.next()){
                 long id_metier = rs.getLong(1);
-                lib.setId_metier((long) id_metier);
+                met.setId_metier((long) id_metier);
             }
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -75,7 +76,7 @@ public class MetierDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM metier"
-                    + " WHERE id =" + met.getId_metier() + ";");
+                    + " WHERE id_metier =" + met.getId_metier() + ";");
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -95,7 +96,7 @@ public class MetierDAO {
         
          try {
              stmt =  cnx.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier"
+             ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
                     + " FROM metier;");
             
            while(rs.next()){
@@ -103,8 +104,7 @@ public class MetierDAO {
                String lib_metier = rs.getString(2);
                long id_domaine = rs.getLong("id_domaine");
                 
-               Domaine dom = DomaineDAO.trouver(cnx, id_domaine);
-                
+               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);              
                Metier met = new Metier(lib_metier, dom);         
                met.setId_metier(id_metier);
                
@@ -136,23 +136,21 @@ public class MetierDAO {
        
     }
 
-    private static Metier TrouverMetier(Connection cnx, String lib_metier) {
+    public static Metier TrouverMetier(Connection cnx, long id_metier) {
         Metier met = null;
         Statement stmt = null;
         
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier"
+            ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
                     + " FROM metier"
-                   + " WHERE lib_metier ='" + lib_metier + "';");
+                   + " WHERE id_metier ='" + id_metier + "';");
             
          if (rs.next()){
-                                      
-               int id_metier = rs.getInt(1);
-               long id_domaine = rs.getLong("id_domaine");
-               
-               Domaine dom = DomaineDAO.trouver(cnx, id_domaine);
+                                                   
+               long id_domaine = rs.getLong(2);      
+               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
                 
                met.setId_metier(id_metier);
                }

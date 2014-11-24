@@ -6,6 +6,7 @@ package ClassDAO;
 
 import Class.Annonceur;
 import Class.Contrat;
+import Class.Diffuseur;
 import Class.Domaine;
 import Class.Metier;
 import Class.Offre;
@@ -22,41 +23,43 @@ import java.util.ArrayList;
  * Alexis
  */
 public class OffreDAO {
-    private static Object id_offre;
+    private static Object offre;
     
-    public static void creer(Connection cnx, Offre offre) throws Exception{
-        Offre o = trouver(cnx, offre.getInt_offre(), offre.getRef_offre(), offre.getDate_offre(), offre.getDuree_offre(), offre.getDate_deb_offre(), offre.getLoc_offre(), offre.getDesc_poste_offre(), offre.getDesc_profil());
+    public static void CreerOffre(Connection cnx, Offre off) throws Exception{
+        Offre o = TrouverOffre(cnx, off.getId_offre());
         if(o != null){
-            throw new Exception(offre.getInt_offre() + " " + offre.getRef_offre() + " " + offre.getDate_offre() + " " + offre.getDuree_offre() + " " + offre.getDate_deb_offre() + " " + offre.getLoc_offre() + " " + offre.getDesc_poste_offre() + " " + offre.getDesc_profil() + " existe déjà !");
-        }
+            throw new Exception(off.getInt_offre() + " existe déjà !");
+        }      
         
-        AnnonceurDAO.creer(cnx, offre.getId_annonceur());
-        ContratDAO.creer(cnx, offre.getId_contrat());
-        MetierDAO.creer(cnx, offre.getId_metier());
-        DomaineDAO.creer(cnx, offre.getId_domaine());
-        
+        AnnonceurDAO.CreerAnnonceur(cnx, off.getAnnonceur());
+        ContratDAO.CreerContrat(cnx, off.getContrat());
+        MetierDAO.CreerMetier(cnx, off.getMetier());
+        DomaineDAO.CreerDomaine(cnx, off.getDomaine());
+        DiffuseurDAO.CreerDiffuseur(cnx, off.getDiffuseur());
         
         Statement stmt = null;
+        
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO offre (int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine) "
-                    + "VALUES ('" + offre.getInt_offre() + "'"
-                    + ", '" + offre.getRef_offre() + "'"
-                    + ", " + offre.getDate_offre() + ""
-                    + ", " + offre.getDuree_offre() + "'"
-                    + ", " + offre.getDate_deb_offre() + "'"
-                    + ", " + offre.getLoc_offre() + "'"
-                    + ", " + offre.getDesc_poste_offre() + "'"
-                    + ", " + offre.getDesc_profil() + "'"
-                    + ", " + offre.getId_annonceur().getId() + "'"
-                    + ", " + offre.getId_contrat().getId() + "'"
-                    + ", " + offre.getId_metier().getId() + "'"
-                    + ", " + offre.getId_domaine().getId() + "'"
+            stmt.executeUpdate("INSERT INTO offre (int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur) "
+                    + "VALUES ('" + off.getInt_offre()
+                    + ", '" + off.getRef_offre() 
+                    + ", " + off.getDate_offre() 
+                    + ", " + off.getDuree_offre() 
+                    + ", " + off.getDate_deb_offre() 
+                    + ", " + off.getLoc_offre() 
+                    + ", " + off.getDesc_poste_offre() 
+                    + ", " + off.getDesc_profil_offre() 
+                    + ", " + off.getAnnonceur().getId_anonceur() 
+                    + ", " + off.getContrat().getId_contrat() 
+                    + ", " + off.getMetier().getId_metier() 
+                    + ", " + off.getDomaine().getId_domaine() 
+                    + ", " + off.getDiffuseur().getId_diffuseur() 
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_offre) FROM offre;");
             if (rs.next()){
-                long id = rs.getLong(1);
-                offre.setId_offre((int) id_offre);
+                long id_offre = rs.getLong(1);
+                off.setId_offre((int)id_offre);
             }
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -71,26 +74,23 @@ public class OffreDAO {
         
     }
     
-    public static void modifier(Connection cnx, Offre offre) throws Exception{
-        Offre o = trouver(cnx, offre.getInt_offre(), offre.getRef_offre(), offre.getDate_offre(), offre.getDuree_offre(), offre.getDate_deb_offre(), offre.getLoc_offre(), offre.getDesc_poste_offre(), offre.getDesc_profil());
-        if(o != null){
-            throw new Exception(offre.getInt_offre() + " " + offre.getRef_offre() + " " + offre.getDate_offre() + " " + offre.getDuree_offre() + " " + offre.getDate_deb_offre() + " " + offre.getLoc_offre() + " " + offre.getDesc_poste_offre() + " " + offre.getDesc_profil() + " existe déjà !");
-        }
+    public static void ModifierOffre(Connection cnx, Offre off) throws Exception{
         
-        AnnonceurDAO.creer(cnx, offre.getId_annonceur());
-        ContratDAO.creer(cnx, offre.getId_contrat());
-        MetierDAO.creer(cnx, offre.getId_metier());
-        DomaineDAO.creer(cnx, offre.getId_domaine());
         
         Statement stmt = null;
         try {            
             stmt = cnx.createStatement();
             stmt.executeUpdate("UPDATE offre SET"
                     
-                    +" NOM = '" + personne.getNom() + "'"
-                    +" PRENOM = '" + personne.getPrenom() + "'"
-                    +" AGE = " + personne.getAge() + ""
-                    +" WHERE ID = " + personne.getId()
+                    +" int_offre = '" + off.getInt_offre()
+                    +" ref_offre = '" + off.getRef_offre() 
+                    +" date_offre = " + off.getDate_offre() 
+                    +" duree_offre = '" + off.getDuree_offre() 
+                    +" date_deb_offre = '" + off.getDate_deb_offre() 
+                    +" loc_offre = " + off.getLoc_offre()
+                    +" desc_poste_offre = '" + off.getDesc_poste_offre() 
+                    +" desc_profil_offre = '" + off.getDesc_profil_offre()               
+                    +" WHERE id_offre = " + off.getId_offre()
             );
             
         } catch (Exception ex) {
@@ -106,20 +106,20 @@ public class OffreDAO {
         }
     }
     
-    public static void supprimer(Connection cnx, Offre offre) throws Exception{
-        Offre o = trouver(cnx, offre.getInt_offre(), offre.getRef_offre(), offre.getDate_offre(), offre.getDuree_offre(), offre.getDate_deb_offre(), offre.getLoc_offre(), offre.getDesc_poste_offre(), offre.getDesc_profil());
-        if(o != null){
-            throw new Exception(offre.getInt_offre() + " " + offre.getRef_offre() + " " + offre.getDate_offre() + " " + offre.getDuree_offre() + " " + offre.getDate_deb_offre() + " " + offre.getLoc_offre() + " " + offre.getDesc_poste_offre() + " " + offre.getDesc_profil() + " existe déjà !");
-        }
-        
+    public static void SupprimerOffre(Connection cnx, Offre off) throws Exception{
+             
         Statement stmt = null;
         try {            
             stmt = cnx.createStatement();
-            stmt.executeUpdate("DELETE FROM PERSONNE "
-                    +" WHERE ID = " + personne.getId()
+            stmt.executeUpdate("DELETE FROM offre "
+                    +" WHERE id_offre = " + off.getId_offre()
             );
             
-            AdresseDAO.supprimer(cnx, personne.getAdr());
+            AnnonceurDAO.SupprimerAnnonceur(cnx, off.getAnnonceur());
+            ContratDAO.SupprimerContrat(cnx, off.getContrat());
+            MetierDAO.SupprimerMetier(cnx, off.getMetier());
+            DomaineDAO.SupprimerDomaine(cnx, off.getDomaine());
+            DiffuseurDAO.SupprimerDiffuseur(cnx, off.getDiffuseur());
             
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -134,26 +134,39 @@ public class OffreDAO {
         }
     }
     
-    public static ArrayList<Personne> lister(Connection cnx){
-        ArrayList<Personne> liste = new ArrayList<>();
+    public static ArrayList<Offre> ListerOffre(Connection cnx){
+        ArrayList<Offre> liste = new ArrayList<>();
         Statement stmt = null;
         try {
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT ID, NOM, PRENOM, AGE, ID_ADR FROM PERSONNES");
+            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur"
+            + " FROM offre;");
             while(rs.next()){
-                long id = rs.getLong("ID");
-                String nom = rs.getString("NOM");
-                String prenom = rs.getString("PRENOM");
-                int age = rs.getInt("AGE");
-                long idAdresse = rs.getLong("ID_ADR");
+                long id = rs.getLong("id_offre");
+                String int_offre = rs.getString(2);
+                String ref_offre = rs.getString(3);
+                Date date_offre = rs.getDate(4);
+                int duree_offre = rs.getInt(5);
+                Date date_deb_offre = rs.getDate(6);
+                String loc_offre = rs.getString(7);
+                String desc_poste_offre = rs.getString(8);
+                String desc_profil_offre = rs.getString(9);
+                long id_annonceur = rs.getInt(10);
+                long id_contrat = rs.getInt(11);
+                long id_metier = rs.getInt(12);
+                long id_domaine = rs.getInt(13);
+                long id_diffuseur = rs.getInt(14);           
                 
-                Adresse adresse = AdresseDAO.trouver(cnx, idAdresse);
+                Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
+                Contrat con = ContratDAO.TrouverContrat(cnx, id_contrat);
+                Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
+                Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
+                Diffuseur dif = DiffuseurDAO.TrouverDiffuseur(cnx, id_diffuseur);
                 
-                Personne personne = new Personne(nom, prenom, adresse);
-                personne.setAge(age);
-                personne.setId((int) id);
+                Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);
                 
-                liste.add(personne);
+                
+                liste.add(off);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -167,7 +180,7 @@ public class OffreDAO {
         return liste;
     }
     
-    public static Offre trouver(Connection cnx, String ref_offre){
+    public static Offre TrouverOffre(Connection cnx, long id_offre){
         Offre offre = null;
         Statement stmt = null;        
         try {

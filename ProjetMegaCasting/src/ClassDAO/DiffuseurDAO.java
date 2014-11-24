@@ -137,7 +137,7 @@ public class DiffuseurDAO {
        
     }
 
-    private static Diffuseur TrouverDiffuseur(Connection cnx, String nom_diffuseur) {
+    public static Diffuseur TrouverDiffuseur(Connection cnx, long id_diffuseur) {
         Diffuseur dif = null;
         Statement stmt = null;
         

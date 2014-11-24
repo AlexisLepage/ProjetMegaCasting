@@ -20,13 +20,14 @@ public class Offre {
     private Date date_deb_offre;
     private String loc_offre;
     private String desc_poste_offre;
-    private String desc_profil;
-    private Annonceur id_annonceur;
-    private Contrat id_contrat;
-    private Metier id_metier;
-    private Domaine id_domaine;
+    private String desc_profil_offre;
+    private Annonceur annonceur;
+    private Contrat contrat;
+    private Metier metier;
+    private Domaine domaine;
+    private Diffuseur diffuseur;
 
-    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil) {
+    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil_offre, Annonceur annonceur, Contrat contrat, Metier metier, Domaine domaine, Diffuseur diffuseur) {
         this.int_offre = int_offre;
         this.ref_offre = ref_offre;
         this.date_offre = date_offre;
@@ -34,9 +35,16 @@ public class Offre {
         this.date_deb_offre = date_deb_offre;
         this.loc_offre = loc_offre;
         this.desc_poste_offre = desc_poste_offre;
-        this.desc_profil = desc_profil;
+        this.desc_profil_offre = desc_profil_offre;
+        this.annonceur = annonceur;
+        this.contrat = contrat;
+        this.metier = metier;
+        this.domaine = domaine;
+        this.diffuseur = diffuseur;
     }
 
+    
+    
     public int getId_offre() {
         return id_offre;
     }
@@ -101,43 +109,54 @@ public class Offre {
         this.desc_poste_offre = desc_poste_offre;
     }
 
-    public String getDesc_profil() {
-        return desc_profil;
+    public String getDesc_profil_offre() {
+        return desc_profil_offre;
     }
 
-    public void setDesc_profil(String desc_profil) {
-        this.desc_profil = desc_profil;
+    public void setDesc_profil_offre(String desc_profil_offre) {
+        this.desc_profil_offre = desc_profil_offre;
     }
 
-    public Annonceur getId_annonceur() {
-        return id_annonceur;
+    public Annonceur getAnnonceur() {
+        return annonceur;
     }
 
-    public void setId_annonceur(Annonceur id_annonceur) {
-        this.id_annonceur = id_annonceur;
+    public void setAnnonceur(Annonceur annonceur) {
+        this.annonceur = annonceur;
     }
 
-    public Contrat getId_contrat() {
-        return id_contrat;
+    public Contrat getContrat() {
+        return contrat;
     }
 
-    public void setId_contrat(Contrat id_contrat) {
-        this.id_contrat = id_contrat;
+    public void setContrat(Contrat contrat) {
+        this.contrat = contrat;
     }
 
-    public Metier getId_metier() {
-        return id_metier;
+    public Metier getMetier() {
+        return metier;
     }
 
-    public void setId_metier(Metier id_metier) {
-        this.id_metier = id_metier;
+    public void setMetier(Metier metier) {
+        this.metier = metier;
     }
 
-    public Domaine getId_domaine() {
-        return id_domaine;
+    public Domaine getDomaine() {
+        return domaine;
     }
 
-    public void setId_domaine(Domaine id_domaine) {
-        this.id_domaine = id_domaine;
+    public void setDomaine(Domaine domaine) {
+        this.domaine = domaine;
     }
+
+    public Diffuseur getDiffuseur() {
+        return diffuseur;
+    }
+
+    public void setDiffuseur(Diffuseur diffuseur) {
+        this.diffuseur = diffuseur;
+    }
+
+ 
+  
 }

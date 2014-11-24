@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class InformationDAO {
 
     public static void CreerInformation(Connection cnx, Information inf) throws Exception{
-            Information i = TrouverInformation(cnx, inf.getMail_information());
+            Information i = TrouverInformation(cnx, inf.getId_information());
         if(i != null){
             throw new Exception(inf.getMail_information() + " existe déjà !");
         }
@@ -29,13 +29,20 @@ public class InformationDAO {
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO information (mail_information) "
+            stmt.executeUpdate("INSERT INTO information (mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information) "
                     + "VALUES ('" + inf.getMail_information()
-                    + ")");
+                    + ", " + inf.getMail_information()
+                    + ", " + inf.getTel_fixe_information()
+                    + ", " + inf.getTel_port_information()
+                    + ", " + inf.getRue_information()
+                    + ", " + inf.getVille_information()
+                    + ", " + inf.getCp_information()
+                    + ", " + inf.getPays_information()
+                    + "');");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_information) FROM information");
             if (rs.next()){
                 long id_information = rs.getLong(1);
-                inf.setId_information((long) id_information);
+                inf.setId_information(id_information);
             }
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -58,7 +65,15 @@ public class InformationDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("UPDATE information"
-                    + " SET mail_information ='" + inf.getMail_information());
+                    + "SET mail_information ='" + inf.getMail_information()
+                    + "AND tel_fixe_information ='" + inf.getTel_fixe_information() 
+                    + "AND tel_port_information ='" + inf.getTel_port_information() 
+                    + "AND rue_information ='" + inf.getRue_information() 
+                    + "AND ville_information ='" + inf.getVille_information() 
+                    + "AND cp_information ='" + inf.getCp_information() 
+                    + "AND pays_information ='" + inf.getPays_information() 
+                     
+                     );
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally{
@@ -94,7 +109,7 @@ public class InformationDAO {
         
          try {
              stmt =  cnx.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information"
+             ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
                     + " FROM information;");
             
            while(rs.next()){
@@ -112,9 +127,7 @@ public class InformationDAO {
                inf.setId_information(id_information);
                
                liste.add(inf);
-               
-               
-               
+             
            }
          } catch (Exception e) {
              e.printStackTrace();
@@ -139,21 +152,20 @@ public class InformationDAO {
        
     }
 
-    private static Information TrouverInformation(Connection cnx, String mail_information) {
+    public static Information TrouverInformation(Connection cnx, long id_information) {
         Information inf = null;
         Statement stmt = null;
         
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information"
+            ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
                     + " FROM information"
-                   + " WHERE mail_information ='" + mail_information + "';");
+                   + " WHERE id_information ='" + id_information + "';");
             
          if (rs.next()){
-                                      
-               long id_information = rs.getLong(1);
-               mail_information = rs.getString(2); 
+                                                  
+               String mail_information = rs.getString(2); 
                int tel_fixe_information = rs.getInt(3);
                int tel_port_information = rs.getInt(4);
                String rue_information = rs.getString(5);

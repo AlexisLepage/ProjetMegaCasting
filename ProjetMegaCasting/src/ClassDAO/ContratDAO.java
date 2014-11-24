@@ -129,7 +129,7 @@ public class ContratDAO {
     }
      
      
-    private static Contrat TrouverContrat(Connection cnx, String lib_contrat) {
+    public static Contrat TrouverContrat(Connection cnx, long id_contrat) {
         Contrat con = null;
         Statement stmt = null;
         
