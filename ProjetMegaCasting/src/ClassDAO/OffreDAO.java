@@ -185,18 +185,34 @@ public class OffreDAO {
         Statement stmt = null;        
         try {
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT ID, AGE, ID_ADR FROM PERSONNES WHERE Nom = '" + nom + "' AND Prenom = '" + prenom + "'");
+            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur"
+                    + " FROM offre"
+                    + " WHERE id_offre = '" + id_offre + "'");
             if(rs.next()){
-                int id_annonceur = rs.getInt("id_annonceur");
-                int duree_offre = rs.getInt("duree_offre");
-                long id = rs.getInt("ID");
+                
+                String int_offre = rs.getString(2);
+                String ref_offre = rs.getString(3);
+                Date date_offre = rs.getDate(4);
+                int duree_offre = rs.getInt(5);
+                Date date_deb_offre = rs.getDate(6);
+                String loc_offre = rs.getString(7);
+                String desc_poste_offre = rs.getString(8);
+                String desc_profil_offre = rs.getString(9);
+                long id_annonceur = rs.getInt(10);
+                long id_contrat = rs.getInt(11);
+                long id_metier = rs.getInt(12);
+                long id_domaine = rs.getInt(13);
+                long id_diffuseur = rs.getInt(14);
+                
+                
                 Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
-                Contrat con = ContratDAO.trouver(cnx, id_annonceur);
-                Metier met = MetierDAO.trouver(cnx, id_metier);
-                Domaine dom = DomaineDAO.trouver(cnx, id_domaine);
-                offre = new Offre(int_offre, ref_offre, date_offre, null, date_deb_offre, loc_offre, desc_poste_offre, desc_profil);
-                offre.setDuree_offre(duree_offre);
-                offre.setId((int) id);
+                Contrat con = ContratDAO.TrouverContrat(cnx, id_contrat);
+                Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
+                Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
+                Diffuseur dif = DiffuseurDAO.TrouverDiffuseur(cnx, id_diffuseur);
+                
+                offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);              
+                offre.setId_offre((int) id_offre);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -207,6 +223,6 @@ public class OffreDAO {
                 } catch (SQLException ex){
                 }
         }
-        return personne;
+        return offre;
     }
 }

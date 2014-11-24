@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class DiffuseurDAO {
     public static void CreerDiffuseur(Connection cnx, Diffuseur dif) throws Exception{
-            Diffuseur d = TrouverDiffuseur(cnx, dif.getNom_diffuseur());
+            Diffuseur d = TrouverDiffuseur(cnx, dif.getId_diffuseur());
         if(d != null){
             throw new Exception(dif.getNom_diffuseur() + " existe déjà !");
         }
@@ -146,18 +146,18 @@ public class DiffuseurDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_diffuseur, nom_diffuseur, id_information"
                     + " FROM diffuseur"
-                   + " WHERE nom_diffuseur ='" + nom_diffuseur + "';");
+                   + " WHERE id_diffuseur ='" + id_diffuseur + "';");
             
          if (rs.next()){
              
                long id_information = rs.getLong(3);                           
-               int id_diffuseur = rs.getInt(1);
+               String nom_diffuseur = rs.getString(2);
                 
                
                Information inf = InformationDAO.TrouverInformation(cnx, id_information);
                
                dif = new Diffuseur(nom_diffuseur, inf);
-               dif.setId_diffuseur(id_diffuseur);
+               dif.setId_diffuseur((int)id_diffuseur);
                }
             
          

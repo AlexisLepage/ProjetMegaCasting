@@ -138,15 +138,15 @@ public class ContratDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_contrat, lib_contrat"
                     + " FROM contrat"
-                   + " WHERE lib_contrat ='" + lib_contrat + "';");
+                    + " WHERE id_contrat ='" + id_contrat + "';");
             
          if (rs.next()){
                                                       
-               int id_contrat = rs.getInt(1);
+               String lib_contrat = rs.getString(2);
                         
                
                con = new Contrat(lib_contrat);
-               con.setId_contrat(id_contrat);
+               con.setId_contrat((int)id_contrat);
                }
             
          
