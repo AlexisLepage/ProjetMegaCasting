@@ -14,11 +14,13 @@ import java.util.Objects;
 public class Annonceur {
     private long id_anonceur;
     private String nom_annonceur;
-    private Information id_information;
+    private Information information;
+    private Domaine domaine;
 
-    public Annonceur(String nom_annonceur, Information id_information) {
+    public Annonceur(String nom_annonceur, Information information, Domaine domaine) {
         this.nom_annonceur = nom_annonceur;
-        this.id_information = id_information;
+        this.information = information;
+        this.domaine = domaine;
     }
 
     public long getId_anonceur() {
@@ -37,13 +39,22 @@ public class Annonceur {
         this.nom_annonceur = nom_annonceur;
     }
 
-    public Information getId_information() {
-        return id_information;
+    public Information getInformation() {
+        return information;
     }
 
-    public void setId_information(Information id_information) {
-        this.id_information = id_information;
+    public void setInformation(Information information) {
+        this.information = information;
     }
 
+    public Domaine getDomaine() {
+        return domaine;
+    }
+
+    public void setDomaine(Domaine domaine) {
+        this.domaine = domaine;
+    }
+
+   
 }
 

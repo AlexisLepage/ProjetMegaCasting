@@ -38,9 +38,9 @@ public class Diffuseur {
         this.id_information = id_information;
     }
 
-    public Diffuseur(String nom_diffuseur) {
+    public Diffuseur(String nom_diffuseur, Information id_information) {
         this.nom_diffuseur = nom_diffuseur;
+        this.id_information = id_information;
     }
-    
-    
+     
 }

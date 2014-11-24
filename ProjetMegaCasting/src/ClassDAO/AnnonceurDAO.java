@@ -5,6 +5,7 @@
 package ClassDAO;
 
 import Class.Annonceur;
+import Class.Domaine;
 import Class.Information;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -25,15 +26,15 @@ public class AnnonceurDAO {
             throw new Exception(ann.getNom_annonceur() + " existe déjà !");
         }
         
-        InformationDAO.CreerInformation(cnx, ann.getId_information());
+        InformationDAO.CreerInformation(cnx, ann.getInformation());
         
         Statement stmt = null;
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO PERSONNE (nom_annonceur, id_information) "
+            stmt.executeUpdate("INSERT INTO annonceur (nom_annonceur, id_information) "
                     + "VALUES ('" + ann.getNom_annonceur() + "'"                 
-                    + ", " + ann.getId_information().getId_information()
+                    + ", " + ann.getInformation().getId_information()
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_annonceur) FROM annonceur");
             if (rs.next()){
@@ -97,17 +98,19 @@ public class AnnonceurDAO {
         
          try {
              stmt =  cnx.createStatement();
-             ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information"
+             ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
                     + " FROM anonceur;");
             
            while(rs.next()){
                long id_annonceur = rs.getInt(1);
                String nom_annonceur = rs.getString(2);                 
                long id_information = rs.getInt(3);
+               long id_domaine = rs.getInt(4);
                
                Information inf = InformationDAO.TrouverInformation(cnx, id_information);
+               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
                
-               Annonceur ann = new Annonceur(nom_annonceur, inf);         
+               Annonceur ann = new Annonceur(nom_annonceur, inf, dom);         
                ann.setId_anonceur(id_annonceur);
                
                liste.add(ann);

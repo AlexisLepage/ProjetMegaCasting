@@ -12,6 +12,8 @@ package Class;
 public class Domaine {
     private long id_domaine;
     private String lib_domaine;
+    private Metier metier;
+    private Annonceur annonceur;
 
     public long getId_domaine() {
         return id_domaine;
