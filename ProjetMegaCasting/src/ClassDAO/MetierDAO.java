@@ -21,7 +21,7 @@ import java.util.ArrayList;
  */
 public class MetierDAO {
     public static void CreerMetier(Connection cnx, Metier met) throws Exception{
-            Metier m = TrouverMetier(cnx, met.getId_metier());
+            Metier m = TrouverMetierNom(cnx, met.getLib_metier());
         if(m != null){
             throw new Exception(met.getLib_metier() + " existe déjà !");
         }
@@ -104,7 +104,8 @@ public class MetierDAO {
                String lib_metier = rs.getString(2);
                long id_domaine = rs.getLong("id_domaine");
                 
-               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);              
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);   
+               
                Metier met = new Metier(lib_metier, dom);         
                met.setId_metier(id_metier);
                
@@ -136,7 +137,7 @@ public class MetierDAO {
        
     }
 
-    public static Metier TrouverMetier(Connection cnx, long id_metier) {
+    public static Metier TrouverMetierId(Connection cnx, long id_metier) {
         Metier met = null;
         Statement stmt = null;
         
@@ -148,10 +149,52 @@ public class MetierDAO {
                    + " WHERE id_metier ='" + id_metier + "';");
             
          if (rs.next()){
-                                                   
-               long id_domaine = rs.getLong(2);      
-               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
+               
+               String lib_metier = rs.getString(2);
+               long id_domaine = rs.getLong(3);
+               
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                 
+               met = new Metier(lib_metier, dom);
+               met.setId_metier(id_metier);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+         
+        return met;
+             
+           }
+    
+     public static Metier TrouverMetierNom(Connection cnx, String lib_metier) {
+        Metier met = null;
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
+                    + " FROM metier"
+                   + " WHERE lib_metier ='" + lib_metier + "';");
+            
+         if (rs.next()){
+               
+               long id_metier = rs.getLong(1);
+               long id_domaine = rs.getLong(3);
+               
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
+                
+               met = new Metier(lib_metier, dom);
                met.setId_metier(id_metier);
                }
             

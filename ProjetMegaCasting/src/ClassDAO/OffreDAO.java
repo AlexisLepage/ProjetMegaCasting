@@ -157,11 +157,11 @@ public class OffreDAO {
                 long id_domaine = rs.getInt(13);
                 long id_diffuseur = rs.getInt(14);           
                 
-                Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
-                Contrat con = ContratDAO.TrouverContrat(cnx, id_contrat);
-                Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
-                Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
-                Diffuseur dif = DiffuseurDAO.TrouverDiffuseur(cnx, id_diffuseur);
+                Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
+                Contrat con = ContratDAO.TrouverContratId(cnx, id_contrat);
+                Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
+                Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
+                Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
                 
                 Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);
                 
@@ -205,11 +205,11 @@ public class OffreDAO {
                 long id_diffuseur = rs.getInt(14);
                 
                 
-                Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
-                Contrat con = ContratDAO.TrouverContrat(cnx, id_contrat);
-                Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
-                Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
-                Diffuseur dif = DiffuseurDAO.TrouverDiffuseur(cnx, id_diffuseur);
+                Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
+                Contrat con = ContratDAO.TrouverContratId(cnx, id_contrat);
+                Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
+                Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
+                Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
                 
                 offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);              
                 offre.setId_offre((int) id_offre);

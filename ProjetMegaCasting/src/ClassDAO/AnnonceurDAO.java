@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class AnnonceurDAO {
     
     public static void CreerAnnonceur(Connection cnx, Annonceur ann) throws Exception{
-            Annonceur a = TrouverAnnonceur(cnx, ann.getId_anonceur());
+            Annonceur a = TrouverAnnonceurNom(cnx, ann.getNom_annonceur());
         if(a != null){
             throw new Exception(ann.getNom_annonceur() + " existe déjà !");
         }
@@ -108,8 +108,8 @@ public class AnnonceurDAO {
                long id_information = rs.getInt(3);
                long id_domaine = rs.getInt(4);
                
-               Information inf = InformationDAO.TrouverInformation(cnx, id_information);
-               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                
                Annonceur ann = new Annonceur(nom_annonceur, inf, dom);         
                ann.setId_anonceur(id_annonceur);
@@ -142,7 +142,7 @@ public class AnnonceurDAO {
        
     }
 
-    public static Annonceur TrouverAnnonceur(Connection cnx, long id_annonceur) {
+    public static Annonceur TrouverAnnonceurId(Connection cnx, long id_annonceur) {
         Annonceur ann = null;
         Statement stmt = null;
         
@@ -160,8 +160,8 @@ public class AnnonceurDAO {
                long id_domaine = rs.getInt(4);
                 
                
-               Information inf = InformationDAO.TrouverInformation(cnx, id_information);
-               Domaine dom = DomaineDAO.TrouverDomaine(cnx, id_domaine);
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                
                ann = new Annonceur(nom_annonceur, inf, dom);
                ann.setId_anonceur(id_annonceur);
@@ -183,6 +183,48 @@ public class AnnonceurDAO {
         return ann;
              
            }
+    public static Annonceur TrouverAnnonceurNom(Connection cnx, String nom_annonceur) {
+        Annonceur ann = null;
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
+                    + " FROM annonceur"
+                   + " WHERE nom_annonceur ='" + nom_annonceur + "';");
+            
+         if (rs.next()){
+               
+               long id_annonceur = rs.getLong(1);
+               long id_information = rs.getLong(3);                            
+               long id_domaine = rs.getInt(4);
+                
+               
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
+               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
+               
+               ann = new Annonceur(nom_annonceur, inf, dom);
+               ann.setId_anonceur(id_annonceur);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+         
+        return ann;
+             
+           }
+    
 
     }
 

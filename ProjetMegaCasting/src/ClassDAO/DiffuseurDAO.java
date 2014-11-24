@@ -19,7 +19,7 @@ import java.util.ArrayList;
  */
 public class DiffuseurDAO {
     public static void CreerDiffuseur(Connection cnx, Diffuseur dif) throws Exception{
-            Diffuseur d = TrouverDiffuseur(cnx, dif.getId_diffuseur());
+            Diffuseur d = TrouverDiffuseurNom(cnx, dif.getNom_diffuseur());
         if(d != null){
             throw new Exception(dif.getNom_diffuseur() + " existe déjà !");
         }
@@ -104,7 +104,7 @@ public class DiffuseurDAO {
                String nom_diffuseur = rs.getString(2);                 
                long id_information = rs.getInt(3);
                
-               Information inf = InformationDAO.TrouverInformation(cnx, id_information);
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
                
                Diffuseur dif = new Diffuseur(nom_diffuseur, inf);         
                dif.setId_diffuseur((int)id_diffuseur);
@@ -137,7 +137,7 @@ public class DiffuseurDAO {
        
     }
 
-    public static Diffuseur TrouverDiffuseur(Connection cnx, long id_diffuseur) {
+    public static Diffuseur TrouverDiffuseurId(Connection cnx, long id_diffuseur) {
         Diffuseur dif = null;
         Statement stmt = null;
         
@@ -154,7 +154,7 @@ public class DiffuseurDAO {
                String nom_diffuseur = rs.getString(2);
                 
                
-               Information inf = InformationDAO.TrouverInformation(cnx, id_information);
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
                
                dif = new Diffuseur(nom_diffuseur, inf);
                dif.setId_diffuseur((int)id_diffuseur);
@@ -176,4 +176,44 @@ public class DiffuseurDAO {
         return dif;
              
            }
+    public static Diffuseur TrouverDiffuseurNom(Connection cnx, String nom_diffuseur) {
+        Diffuseur dif = null;
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_diffuseur, nom_diffuseur, id_information"
+                    + " FROM diffuseur"
+                   + " WHERE nom_diffuseur ='" + nom_diffuseur + "';");
+            
+         if (rs.next()){
+             
+               long id_information = rs.getLong(3);                           
+               long id_diffuseur = rs.getLong(1);
+                
+               
+               Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
+               
+               dif = new Diffuseur(nom_diffuseur, inf);
+               dif.setId_diffuseur((int)id_diffuseur);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+         
+        return dif;
+             
+           }
+    
 }

@@ -6,6 +6,7 @@ package ClassDAO;
 
 import Class.Annonceur;
 import Class.Contrat;
+import Class.Diffuseur;
 import Class.Information;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -20,8 +21,13 @@ import java.util.ArrayList;
  */
 public class ContratDAO {
               
-    static public void CreerContrat(Connection cnx, Contrat con){
-               
+    static public void CreerContrat(Connection cnx, Contrat con) throws Exception{
+            
+        Contrat c = TrouverContratNom(cnx, con.getLib_contrat());
+        if(c != null){
+            throw new Exception(con.getLib_contrat() + " existe déjà !");
+        } 
+        
         Statement stmt = null;
         
          try {
@@ -129,7 +135,7 @@ public class ContratDAO {
     }
      
      
-    public static Contrat TrouverContrat(Connection cnx, long id_contrat) {
+    public static Contrat TrouverContratId(Connection cnx, long id_contrat) {
         Contrat con = null;
         Statement stmt = null;
         
@@ -143,6 +149,43 @@ public class ContratDAO {
          if (rs.next()){
                                                       
                String lib_contrat = rs.getString(2);
+                        
+               
+               con = new Contrat(lib_contrat);
+               con.setId_contrat((int)id_contrat);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+         
+        return con;
+             
+           }
+    
+        public static Contrat TrouverContratNom(Connection cnx, String lib_contrat) {
+        Contrat con = null;
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_contrat, lib_contrat"
+                    + " FROM contrat"
+                    + " WHERE lib_contrat ='" + lib_contrat + "';");
+            
+         if (rs.next()){
+                                                      
+               long id_contrat = rs.getLong(1);
                         
                
                con = new Contrat(lib_contrat);

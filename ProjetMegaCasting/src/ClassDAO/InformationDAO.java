@@ -20,9 +20,9 @@ import java.util.ArrayList;
 public class InformationDAO {
 
     public static void CreerInformation(Connection cnx, Information inf) throws Exception{
-            Information i = TrouverInformation(cnx, inf.getId_information());
+            Information i = TrouverInformationMail(cnx, inf.getMail_information());
         if(i != null){
-            throw new Exception(inf.getMail_information() + " existe déjà !");
+            throw new Exception("L'information existe déjà !");
         }
         
         Statement stmt = null;
@@ -152,7 +152,7 @@ public class InformationDAO {
        
     }
 
-    public static Information TrouverInformation(Connection cnx, long id_information) {
+    public static Information TrouverInformationId(Connection cnx, long id_information) {
         Information inf = null;
         Statement stmt = null;
         
@@ -166,6 +166,48 @@ public class InformationDAO {
          if (rs.next()){
                                                   
                String mail_information = rs.getString(2); 
+               int tel_fixe_information = rs.getInt(3);
+               int tel_port_information = rs.getInt(4);
+               String rue_information = rs.getString(5);
+               String ville_information = rs.getString(6);
+               int cp_information = rs.getInt(7);
+               String pays_information = rs.getString(8);
+               
+               inf = new Information(mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information);
+               inf.setId_information(id_information);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+         
+        return inf;
+             
+           }
+    
+     public static Information TrouverInformationMail(Connection cnx, String mail_information) {
+        Information inf = null;
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
+                    + " FROM information"
+                   + " WHERE mail_information ='" + mail_information + "';");
+            
+         if (rs.next()){
+                                                  
+               long id_information = rs.getLong(1);
                int tel_fixe_information = rs.getInt(3);
                int tel_port_information = rs.getInt(4);
                String rue_information = rs.getString(5);

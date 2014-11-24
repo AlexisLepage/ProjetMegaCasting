@@ -7,6 +7,7 @@ package ClassDAO;
 import Class.Annonceur;
 import Class.Contrat;
 import Class.Domaine;
+import Class.Information;
 import Class.Metier;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -21,8 +22,13 @@ import java.util.ArrayList;
  */
 public class DomaineDAO {
     
-    static public void CreerDomaine(Connection cnx, Domaine dom){
+    static public void CreerDomaine(Connection cnx, Domaine dom) throws Exception{
                
+        Domaine d = TrouverDomaineNom(cnx, dom.getLib_domaine());
+        if(d != null){
+            throw new Exception(dom.getLib_domaine() + " existe déjà !");
+        }
+        
         Statement stmt = null;
         
          try {
@@ -103,8 +109,8 @@ public class DomaineDAO {
                long id_metier = rs.getInt(3);
                long id_annonceur = rs.getInt(4);
                
-               Metier met = MetierDAO.TrouverMetier(cnx, id_metier);
-               Annonceur ann = AnnonceurDAO.TrouverAnnonceur(cnx, id_annonceur);
+               Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
+               Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
               
                Domaine dom = new Domaine(lib_domaine, met, ann);         
                dom.setId_domaine((int)id_domaine);
@@ -138,26 +144,28 @@ public class DomaineDAO {
     }
      
      
-    public static Domaine TrouverDomaine(Connection cnx, long id_domaine) {
-        Domaine dom = null;
-        Metier met = null;
-        Annonceur ann = null;
+    public static Domaine TrouverDomaineId(Connection cnx, long id_domaine) {
+        Domaine dom = null;     
         Statement stmt = null;
         
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine"
+            ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
                     + " FROM domaine"
                    + " WHERE id_domaine ='" + id_domaine + "';");
             
          if (rs.next()){
                                                       
                String lib_domaine = rs.getString(1);
-                        
+               long id_metier = rs.getLong(3); 
+               long id_annonceur = rs.getLong(4);
+               
+               Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
+               Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
                
                dom = new Domaine(lib_domaine, met, ann);
-               dom.setLib_domaine(lib_domaine);
+               dom.setId_domaine(id_domaine);
                }
             
          
@@ -177,6 +185,42 @@ public class DomaineDAO {
              
            }
 
-   
-
+    public static Domaine TrouverDomaineNom(Connection cnx, String lib_domaine) {
+        Domaine dom = null;     
+        Statement stmt = null;
+        
+        try {
+            
+            stmt =  cnx.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
+                    + " FROM domaine"
+                   + " WHERE lib_domaine ='" + lib_domaine + "';");
+            
+         if (rs.next()){
+                                                      
+               long id_domaine = rs.getLong(1);
+               long id_metier = rs.getLong(3); 
+               long id_annonceur = rs.getLong(4);
+               
+               Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
+               Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
+               
+               dom = new Domaine(lib_domaine, met, ann);
+               dom.setId_domaine(id_domaine);
+               }
+            
+         
+              
+        } catch (Exception e) {
+            
+        }finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException ex) {
+                }
+            }   
+}
+         return dom;
+    }
 }
