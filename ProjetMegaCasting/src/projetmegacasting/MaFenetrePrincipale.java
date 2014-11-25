@@ -4,6 +4,8 @@
  */
 package projetmegacasting;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author
@@ -69,12 +71,11 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Panneau_principal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Panneau_principal.setLayout(null);
-        getContentPane().add(Panneau_principal);
-        Panneau_principal.setBounds(641, 0, 102, 250);
+        getContentPane().add(Panneau_principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 0, 102, 0));
 
         Bouton_menu_ajouter.setText("Ajouter");
         Bouton_menu_ajouter.addActionListener(new java.awt.event.ActionListener() {
@@ -82,35 +83,34 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
                 Bouton_menu_ajouterActionPerformed(evt);
             }
         });
-        getContentPane().add(Bouton_menu_ajouter);
-        Bouton_menu_ajouter.setBounds(0, 250, 120, 80);
+        getContentPane().add(Bouton_menu_ajouter, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 120, 80));
 
         Bouton_menu_modifier.setText("Modifier");
-        getContentPane().add(Bouton_menu_modifier);
-        Bouton_menu_modifier.setBounds(120, 250, 120, 80);
+        getContentPane().add(Bouton_menu_modifier, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 120, 80));
 
         Bouton_menu_supprimer.setText("Supprimer");
-        getContentPane().add(Bouton_menu_supprimer);
-        Bouton_menu_supprimer.setBounds(480, 250, 120, 80);
+        getContentPane().add(Bouton_menu_supprimer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 120, 80));
 
         Bouton_menu_lister.setText("Lister");
-        getContentPane().add(Bouton_menu_lister);
-        Bouton_menu_lister.setBounds(240, 250, 120, 80);
+        getContentPane().add(Bouton_menu_lister, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 120, 80));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Desktop\\background.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/background.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 250);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
 
         Bouton_menu_rechercher.setText("Rechercher");
-        getContentPane().add(Bouton_menu_rechercher);
-        Bouton_menu_rechercher.setBounds(360, 250, 120, 80);
+        getContentPane().add(Bouton_menu_rechercher, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 120, 80));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Bouton_menu_ajouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_menu_ajouterActionPerformed
         // TODO add your handling code here:
+        /* Ouvrir nouvelle fenêtre */
+        final JFrame frame = new JFrame("Ajouter");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 300);
+        frame.setVisible(true);
     }//GEN-LAST:event_Bouton_menu_ajouterActionPerformed
 
     /**
