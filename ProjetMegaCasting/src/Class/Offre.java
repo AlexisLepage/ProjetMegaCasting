@@ -26,25 +26,8 @@ public class Offre {
     private Metier metier;
     private Domaine domaine;
     private Diffuseur diffuseur;
+    private Media media;
 
-    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil_offre, Annonceur annonceur, Contrat contrat, Metier metier, Domaine domaine, Diffuseur diffuseur) {
-        this.int_offre = int_offre;
-        this.ref_offre = ref_offre;
-        this.date_offre = date_offre;
-        this.duree_offre = duree_offre;
-        this.date_deb_offre = date_deb_offre;
-        this.loc_offre = loc_offre;
-        this.desc_poste_offre = desc_poste_offre;
-        this.desc_profil_offre = desc_profil_offre;
-        this.annonceur = annonceur;
-        this.contrat = contrat;
-        this.metier = metier;
-        this.domaine = domaine;
-        this.diffuseur = diffuseur;
-    }
-
-    
-    
     public int getId_offre() {
         return id_offre;
     }
@@ -157,6 +140,30 @@ public class Offre {
         this.diffuseur = diffuseur;
     }
 
- 
-  
+    public Media getMedia() {
+        return media;
+    }
+
+    public void setMedia(Media media) {
+        this.media = media;
+    }
+
+    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil_offre, Annonceur annonceur, Contrat contrat, Metier metier, Domaine domaine, Diffuseur diffuseur, Media media) {
+        this.int_offre = int_offre;
+        this.ref_offre = ref_offre;
+        this.date_offre = date_offre;
+        this.duree_offre = duree_offre;
+        this.date_deb_offre = date_deb_offre;
+        this.loc_offre = loc_offre;
+        this.desc_poste_offre = desc_poste_offre;
+        this.desc_profil_offre = desc_profil_offre;
+        this.annonceur = annonceur;
+        this.contrat = contrat;
+        this.metier = metier;
+        this.domaine = domaine;
+        this.diffuseur = diffuseur;
+        this.media = media;
+    }
+
+   
 }

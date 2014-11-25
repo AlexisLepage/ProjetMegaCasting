@@ -8,6 +8,7 @@ import Class.Annonceur;
 import Class.Contrat;
 import Class.Diffuseur;
 import Class.Domaine;
+import Class.Media;
 import Class.Metier;
 import Class.Offre;
 import java.sql.Connection;
@@ -120,6 +121,7 @@ public class OffreDAO {
             MetierDAO.SupprimerMetier(cnx, off.getMetier());
             DomaineDAO.SupprimerDomaine(cnx, off.getDomaine());
             DiffuseurDAO.SupprimerDiffuseur(cnx, off.getDiffuseur());
+            MediaDAO.SupprimerMedia(cnx, off.getMedia());
             
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -139,7 +141,7 @@ public class OffreDAO {
         Statement stmt = null;
         try {
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur"
+            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur, id_media"
             + " FROM offre;");
             while(rs.next()){
                 long id = rs.getLong("id_offre");
@@ -155,15 +157,17 @@ public class OffreDAO {
                 long id_contrat = rs.getInt(11);
                 long id_metier = rs.getInt(12);
                 long id_domaine = rs.getInt(13);
-                long id_diffuseur = rs.getInt(14);           
+                long id_diffuseur = rs.getInt(14); 
+                long id_media = rs.getLong(15);
                 
                 Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
                 Contrat con = ContratDAO.TrouverContratId(cnx, id_contrat);
                 Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
                 Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                 Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
+                Media med = MediaDAO.TrouverMediaId(cnx, id_media);
                 
-                Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);
+                Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif, med);
                 
                 
                 liste.add(off);
@@ -185,7 +189,7 @@ public class OffreDAO {
         Statement stmt = null;        
         try {
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur"
+            ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur, id_media"
                     + " FROM offre"
                     + " WHERE id_offre = '" + id_offre + "'");
             if(rs.next()){
@@ -203,15 +207,16 @@ public class OffreDAO {
                 long id_metier = rs.getInt(12);
                 long id_domaine = rs.getInt(13);
                 long id_diffuseur = rs.getInt(14);
-                
+                long id_media = rs.getLong(15);
                 
                 Annonceur ann = AnnonceurDAO.TrouverAnnonceurId(cnx, id_annonceur);
                 Contrat con = ContratDAO.TrouverContratId(cnx, id_contrat);
                 Metier met = MetierDAO.TrouverMetierId(cnx, id_metier);
                 Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                 Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
+                Media med = MediaDAO.TrouverMediaId(cnx, id_media);
                 
-                offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif);              
+                offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif, med);              
                 offre.setId_offre((int) id_offre);
             }
         } catch (Exception ex) {
