@@ -76,7 +76,7 @@ public class MetierDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM metier"
-                    + " WHERE id_metier =" + met.getId_metier() + ";");
+                    + " WHERE id_metier = " + met.getId_metier());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -97,7 +97,7 @@ public class MetierDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
-                    + " FROM metier;");
+                    + " FROM metier");
             
            while(rs.next()){
                long id_metier = rs.getInt(1);
@@ -146,7 +146,7 @@ public class MetierDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
                     + " FROM metier"
-                   + " WHERE id_metier ='" + id_metier + "';");
+                   + " WHERE id_metier = '" + id_metier + "'");
             
          if (rs.next()){
                
@@ -185,7 +185,7 @@ public class MetierDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_metier, lib_metier, id_domaine"
                     + " FROM metier"
-                   + " WHERE lib_metier ='" + lib_metier + "';");
+                   + " WHERE lib_metier = '" + lib_metier + "'");
             
          if (rs.next()){
                

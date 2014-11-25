@@ -76,7 +76,7 @@ public class ContratDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM contrat"
-                    + " WHERE id =" +con.getId_contrat() + ";");
+                    + " WHERE id = " + con.getId_contrat());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -97,7 +97,7 @@ public class ContratDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_contrat, lib_contrat"
-                    + " FROM contrat;");
+                    + " FROM contrat");
             
            while(rs.next()){
                long id_contrat = rs.getInt(1);
@@ -144,7 +144,7 @@ public class ContratDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_contrat, lib_contrat"
                     + " FROM contrat"
-                    + " WHERE id_contrat ='" + id_contrat + "';");
+                    + " WHERE id_contrat = '" + id_contrat + "'");
             
          if (rs.next()){
                                                       
@@ -181,7 +181,7 @@ public class ContratDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_contrat, lib_contrat"
                     + " FROM contrat"
-                    + " WHERE lib_contrat ='" + lib_contrat + "';");
+                    + " WHERE lib_contrat = '" + lib_contrat + "'");
             
          if (rs.next()){
                                                       

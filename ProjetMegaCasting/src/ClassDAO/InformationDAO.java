@@ -89,7 +89,7 @@ public class InformationDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM information"
-                    + " WHERE id_ =" + inf.getId_information() + ";");
+                    + " WHERE id_ = " + inf.getId_information());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -110,7 +110,7 @@ public class InformationDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
-                    + " FROM information;");
+                    + " FROM information");
             
            while(rs.next()){
                long id_information = rs.getLong(1);
@@ -161,7 +161,7 @@ public class InformationDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
                     + " FROM information"
-                   + " WHERE id_information ='" + id_information + "';");
+                   + " WHERE id_information = '" + id_information + "'");
             
          if (rs.next()){
                                                   
@@ -203,7 +203,7 @@ public class InformationDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_information, mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information"
                     + " FROM information"
-                   + " WHERE mail_information ='" + mail_information + "';");
+                   + " WHERE mail_information = '" + mail_information + "'");
             
          if (rs.next()){
                                                   
