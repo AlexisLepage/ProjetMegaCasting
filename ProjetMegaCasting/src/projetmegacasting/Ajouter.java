@@ -4,6 +4,8 @@
  */
 package projetmegacasting;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author
@@ -11,15 +13,30 @@ package projetmegacasting;
  */
 public class Ajouter extends javax.swing.JFrame {
 
+    private JFrame parentFrame;
+    
     /**
      * Creates
      * new
      * form
      * Ajouter
      */
-    public Ajouter() {
+    public Ajouter(JFrame parentFrame) {
+        this.parentFrame = parentFrame;
+        this.parentFrame.setVisible(true);
+        
         initComponents();
+        
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
+
+    @Override
+    public void dispose() {
+        this.parentFrame.setVisible(true);
+        super.dispose();
+    }
+    
+    
 
     /**
      * This
@@ -58,6 +75,7 @@ public class Ajouter extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setName("Ajouter"); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,11 +124,11 @@ public class Ajouter extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Ajouter().setVisible(true);
             }
-        });
+        });*/
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables

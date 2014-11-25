@@ -4,6 +4,7 @@
  */
 package projetmegacasting;
 
+import java.awt.Frame;
 import javax.swing.JFrame;
 
 /**
@@ -60,58 +61,115 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu1 = new javax.swing.JMenu();
-        Panneau_principal = new javax.swing.JPanel();
-        Bouton_menu_ajouter = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         Bouton_menu_modifier = new javax.swing.JButton();
         Bouton_menu_supprimer = new javax.swing.JButton();
-        Bouton_menu_lister = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Bouton_menu_rechercher = new javax.swing.JButton();
+        Bouton_menu_ajouter = new javax.swing.JButton();
+        Bouton_menu_lister = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setResizable(false);
 
-        Panneau_principal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        Panneau_principal.setLayout(null);
-        getContentPane().add(Panneau_principal, new org.netbeans.lib.awtextra.AbsoluteConstraints(641, 0, 102, 0));
+        jPanel1.setAlignmentX(0.0F);
+        jPanel1.setAlignmentY(0.0F);
+
+        Bouton_menu_modifier.setText("Modifier");
+        Bouton_menu_modifier.setAlignmentY(0.0F);
+
+        Bouton_menu_supprimer.setText("Supprimer");
+        Bouton_menu_supprimer.setAlignmentY(0.0F);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/background.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        Bouton_menu_rechercher.setText("Rechercher");
+        Bouton_menu_rechercher.setAlignmentY(0.0F);
+        Bouton_menu_rechercher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton_menu_rechercherActionPerformed(evt);
+            }
+        });
 
         Bouton_menu_ajouter.setText("Ajouter");
+        Bouton_menu_ajouter.setAlignmentY(0.0F);
         Bouton_menu_ajouter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Bouton_menu_ajouterActionPerformed(evt);
             }
         });
-        getContentPane().add(Bouton_menu_ajouter, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 120, 80));
-
-        Bouton_menu_modifier.setText("Modifier");
-        getContentPane().add(Bouton_menu_modifier, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 120, 80));
-
-        Bouton_menu_supprimer.setText("Supprimer");
-        getContentPane().add(Bouton_menu_supprimer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 120, 80));
 
         Bouton_menu_lister.setText("Lister");
-        getContentPane().add(Bouton_menu_lister, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 120, 80));
+        Bouton_menu_lister.setAlignmentY(0.0F);
+        Bouton_menu_lister.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        Bouton_menu_lister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bouton_menu_listerActionPerformed(evt);
+            }
+        });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/background.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, -1));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(Bouton_menu_ajouter, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bouton_menu_modifier, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bouton_menu_lister, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bouton_menu_rechercher, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Bouton_menu_supprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(Bouton_menu_modifier, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                        .addComponent(Bouton_menu_ajouter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Bouton_menu_rechercher, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Bouton_menu_supprimer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Bouton_menu_lister, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        Bouton_menu_rechercher.setText("Rechercher");
-        getContentPane().add(Bouton_menu_rechercher, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, 120, 80));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void Bouton_menu_ajouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_menu_ajouterActionPerformed
         // TODO add your handling code here:
-        /* Ouvrir nouvelle fenêtre */
-        final JFrame frame = new JFrame("Ajouter");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 300);
-        frame.setVisible(true);
+        
     }//GEN-LAST:event_Bouton_menu_ajouterActionPerformed
+
+    private void Bouton_menu_listerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_menu_listerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bouton_menu_listerActionPerformed
+
+    private void Bouton_menu_rechercherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bouton_menu_rechercherActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Bouton_menu_rechercherActionPerformed
 
     /**
      * @param
@@ -158,8 +216,8 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
     private javax.swing.JButton Bouton_menu_modifier;
     private javax.swing.JButton Bouton_menu_rechercher;
     private javax.swing.JButton Bouton_menu_supprimer;
-    private javax.swing.JPanel Panneau_principal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
