@@ -24,7 +24,6 @@ import java.util.ArrayList;
  * Alexis
  */
 public class OffreDAO {
-    private static Object offre;
     
     public static void CreerOffre(Connection cnx, Offre off) throws Exception{
         Offre o = TrouverOffre(cnx, off.getId_offre());
@@ -57,7 +56,7 @@ public class OffreDAO {
                     + ", " + off.getDomaine().getId_domaine() 
                     + ", " + off.getDiffuseur().getId_diffuseur() 
                     + ")");
-            ResultSet rs = stmt.executeQuery("SELECT MAX(id_offre) FROM offre;");
+            ResultSet rs = stmt.executeQuery("SELECT MAX(id_offre) FROM offre");
             if (rs.next()){
                 long id_offre = rs.getLong(1);
                 off.setId_offre((int)id_offre);
@@ -113,8 +112,7 @@ public class OffreDAO {
         try {            
             stmt = cnx.createStatement();
             stmt.executeUpdate("DELETE FROM offre "
-                    +" WHERE id_offre = " + off.getId_offre()
-            );
+                    +" WHERE id_offre = " + off.getId_offre());
             
             AnnonceurDAO.SupprimerAnnonceur(cnx, off.getAnnonceur());
             ContratDAO.SupprimerContrat(cnx, off.getContrat());
@@ -142,7 +140,8 @@ public class OffreDAO {
         try {
             stmt = cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_offre, int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur, id_media"
-            + " FROM offre;");
+                    + " FROM offre"
+                    + "'");
             while(rs.next()){
                 long id = rs.getLong("id_offre");
                 String int_offre = rs.getString(2);

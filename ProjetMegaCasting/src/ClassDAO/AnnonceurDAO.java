@@ -79,7 +79,7 @@ public class AnnonceurDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM annonceur"
-                    + " WHERE id =" +ann.getId_anonceur() + ";");
+                    + " WHERE id = " + ann.getId_anonceur());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -100,7 +100,7 @@ public class AnnonceurDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
-                    + " FROM anonceur;");
+                    + " FROM anonceur");
             
            while(rs.next()){
                long id_annonceur = rs.getInt(1);
@@ -151,7 +151,7 @@ public class AnnonceurDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
                     + " FROM annonceur"
-                   + " WHERE id_annonceur ='" + id_annonceur + "';");
+                   + " WHERE id_annonceur = '" + id_annonceur + "'");
             
          if (rs.next()){
              
@@ -194,7 +194,7 @@ public class AnnonceurDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
                     + " FROM annonceur"
-                   + " WHERE nom_annonceur ='" + nom_annonceur + "';");
+                   + " WHERE nom_annonceur = '" + nom_annonceur + "'");
             
          if (rs.next()){
                

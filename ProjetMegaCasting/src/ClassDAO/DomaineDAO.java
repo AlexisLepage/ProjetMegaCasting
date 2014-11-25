@@ -80,7 +80,7 @@ public class DomaineDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM domaine"
-                    + " WHERE id =" +dom.getId_domaine() + ";");
+                    + " WHERE id = " + dom.getId_domaine());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -101,7 +101,7 @@ public class DomaineDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
-                    + " FROM domaine;");
+                    + " FROM domaine");
             
            while(rs.next()){
                long id_domaine = rs.getInt(1);
@@ -153,7 +153,7 @@ public class DomaineDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
                     + " FROM domaine"
-                   + " WHERE id_domaine ='" + id_domaine + "';");
+                   + " WHERE id_domaine = '" + id_domaine + "'");
             
          if (rs.next()){
                                                       
@@ -194,7 +194,7 @@ public class DomaineDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_domaine, lib_domaine, id_metier, id_annonceur"
                     + " FROM domaine"
-                   + " WHERE lib_domaine ='" + lib_domaine + "';");
+                   + " WHERE lib_domaine = '" + lib_domaine + "'");
             
          if (rs.next()){
                                                       

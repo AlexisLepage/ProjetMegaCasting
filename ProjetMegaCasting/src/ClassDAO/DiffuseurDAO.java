@@ -76,7 +76,7 @@ public class DiffuseurDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM diffuseur"
-                    + " WHERE id =" +dif.getId_diffuseur() + ";");
+                    + " WHERE id = " + dif.getId_diffuseur());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -97,7 +97,7 @@ public class DiffuseurDAO {
          try {
              stmt =  cnx.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT id_diffuseur, nom_diffuseur, id_information"
-                    + " FROM diffuseur;");
+                    + " FROM diffuseur");
             
            while(rs.next()){
                long id_diffuseur = rs.getInt(1);
@@ -146,7 +146,7 @@ public class DiffuseurDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_diffuseur, nom_diffuseur, id_information"
                     + " FROM diffuseur"
-                   + " WHERE id_diffuseur ='" + id_diffuseur + "';");
+                   + " WHERE id_diffuseur ='" + id_diffuseur + "'");
             
          if (rs.next()){
              
@@ -185,7 +185,7 @@ public class DiffuseurDAO {
             stmt =  cnx.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT id_diffuseur, nom_diffuseur, id_information"
                     + " FROM diffuseur"
-                   + " WHERE nom_diffuseur ='" + nom_diffuseur + "';");
+                   + " WHERE nom_diffuseur ='" + nom_diffuseur + "'");
             
          if (rs.next()){
              
