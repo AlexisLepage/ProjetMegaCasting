@@ -4,6 +4,8 @@
  */
 package projetmegacasting;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author
@@ -20,6 +22,6 @@ public class ProjetMegaCasting {
      * arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
     }
 }

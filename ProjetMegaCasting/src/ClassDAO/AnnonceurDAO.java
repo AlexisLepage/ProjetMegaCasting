@@ -24,11 +24,11 @@ public class AnnonceurDAO {
             Annonceur a = TrouverAnnonceurNom(cnx, ann.getNom_annonceur());
         if(a != null){
             throw new Exception(ann.getNom_annonceur() + " existe déjà !");
-        }
-        
-        InformationDAO.CreerInformation(cnx, ann.getInformation());
+        }       
         
         Statement stmt = null;
+        
+        InformationDAO.CreerInformation(cnx, ann.getInformation());
         
         try {
             stmt = cnx.createStatement();
@@ -42,6 +42,9 @@ public class AnnonceurDAO {
                 long id = rs.getLong(1);
                 ann.setId_anonceur((int) id);
             }
+            
+            
+            
         } catch (Exception ex) {
          ex.printStackTrace();
         } finally {
