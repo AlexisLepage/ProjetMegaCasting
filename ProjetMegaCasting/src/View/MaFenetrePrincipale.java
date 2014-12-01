@@ -17,14 +17,12 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
     
     private AcceuilForm acceuilform;
     private AnnonceurForm annonceurform;
-    private ContratForm contratform;
     private DiffuseurForm diffuseurform;
     private DomaineFrom domaineform;
     private InformationForm informationform;
     private MediaForm mediaform;
     private MetierForm metierform;
     private OffreForm offreform;
-    private Type_MediaForm type_mediaoffre;
     
     public MaFenetrePrincipale() {
         initComponents();   
@@ -43,8 +41,6 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
         annonceurform = new AnnonceurForm(this);
         Panel_principal.add(annonceurform, "annonceurCard");
         
-        contratform = new ContratForm(this);
-        Panel_principal.add(contratform, "contratCard");
         
         diffuseurform = new DiffuseurForm(this);
         Panel_principal.add(diffuseurform, "diffuseurCard");
@@ -64,8 +60,6 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
         offreform = new OffreForm(this);
         Panel_principal.add(offreform, "offreCard");
         
-        type_mediaoffre = new Type_MediaForm(this);
-        Panel_principal.add(type_mediaoffre, "type_mediaCard");
     }
     
 
