@@ -17,11 +17,12 @@ public class Annonceur {
     private Information information;
     private Domaine domaine;
 
-    public Annonceur(String nom_annonceur, Information information, Domaine domaine) {
+    public Annonceur(String nom_annonceur, Information information) {
         this.nom_annonceur = nom_annonceur;
         this.information = information;
-        this.domaine = domaine;
     }
+
+   
 
     public long getId_anonceur() {
         return id_anonceur;

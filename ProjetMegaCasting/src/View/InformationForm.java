@@ -112,6 +112,12 @@ public class InformationForm extends javax.swing.JPanel {
         jLabel57.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel57.setText("id information");
 
+        jTextField43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField43ActionPerformed(evt);
+            }
+        });
+
         jLabel58.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel58.setText("Email");
 
@@ -288,11 +294,13 @@ public class InformationForm extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur10ActionPerformed
 
+    private void jTextField43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField43ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_ajouter_ajouter_anonceur10;
     private javax.swing.JButton jButton_retour_ajouter_annonceur4;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
@@ -302,12 +310,9 @@ public class InformationForm extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel80;
     private javax.swing.JPanel jPanel83;
     protected javax.swing.JPanel jPanel_information;
-    private javax.swing.JTextField jTextField41;
     private javax.swing.JTextField jTextField43;
     private javax.swing.JTextField jTextField44;
     private javax.swing.JTextField jTextField45;

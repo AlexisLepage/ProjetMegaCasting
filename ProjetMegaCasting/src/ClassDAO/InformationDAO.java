@@ -29,16 +29,9 @@ public class InformationDAO {
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO information (mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information) "
-                    + "VALUES ('" + inf.getMail_information()
-                    + ", " + inf.getMail_information()
-                    + ", " + inf.getTel_fixe_information()
-                    + ", " + inf.getTel_port_information()
-                    + ", " + inf.getRue_information()
-                    + ", " + inf.getVille_information()
-                    + ", " + inf.getCp_information()
-                    + ", " + inf.getPays_information()
-                    + "');");
+            stmt.executeUpdate("INSERT INTO information (mail_information, tel_fixe_information, tel_port_information, rue_information, ville_information, cp_information, pays_information)"
+                    + " VALUES ('" +inf.getMail_information()+"'," +inf.getTel_fixe_information()+ "," + inf.getTel_port_information() + ",'" +inf.getRue_information()+ "','" +inf.getVille_information()+ "'," + inf.getCp_information() + ",'" +inf.getPays_information()+"');");
+            
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_information) FROM information");
             if (rs.next()){
                 long id_information = rs.getLong(1);

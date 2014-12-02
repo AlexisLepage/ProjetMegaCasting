@@ -32,10 +32,9 @@ public class AnnonceurDAO {
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO annonceur (nom_annonceur, id_information, id_domaine) "
+            stmt.executeUpdate("INSERT INTO annonceur (nom_annonceur, id_information) "
                     + "VALUES ('" + ann.getNom_annonceur() + "'"                 
                     + ", " + ann.getInformation().getId_information()
-                    + ", " + ann.getDomaine().getId_domaine()
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_annonceur) FROM annonceur");
             if (rs.next()){
@@ -66,7 +65,8 @@ public class AnnonceurDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("UPDATE annonceur"
-                    + " SET nom_annonceur ='" + ann.getNom_annonceur());
+                    + " SET nom_annonceur ='" + ann.getNom_annonceur()+ "'"
+                    + " WHERE id_annonceur =" + ann.getId_anonceur() + ";");
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally{
@@ -82,7 +82,7 @@ public class AnnonceurDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("DELETE FROM annonceur"
-                    + " WHERE id = " + ann.getId_anonceur());
+                    + " WHERE id_annonceur = " + ann.getId_anonceur() + ";");
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -114,7 +114,8 @@ public class AnnonceurDAO {
                Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
                Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                
-               Annonceur ann = new Annonceur(nom_annonceur, inf, dom);         
+               Annonceur ann = new Annonceur(nom_annonceur, inf); 
+               ann.setDomaine(dom);
                ann.setId_anonceur(id_annonceur);
                
                liste.add(ann);
@@ -152,21 +153,19 @@ public class AnnonceurDAO {
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information, id_domaine"
+            ResultSet rs = stmt.executeQuery("SELECT id_annonceur, nom_annonceur, id_information"
                     + " FROM annonceur"
                    + " WHERE id_annonceur = '" + id_annonceur + "'");
             
          if (rs.next()){
              
                long id_information = rs.getLong(3);                           
-               String nom_annonceur = rs.getString(2);
-               long id_domaine = rs.getInt(4);
+               String nom_annonceur = rs.getString(2);          
                 
                
                Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
-               Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
-               
-               ann = new Annonceur(nom_annonceur, inf, dom);
+                  
+               ann = new Annonceur(nom_annonceur, inf);  
                ann.setId_anonceur(id_annonceur);
                }
             
@@ -209,8 +208,9 @@ public class AnnonceurDAO {
                Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
                Domaine dom = DomaineDAO.TrouverDomaineId(cnx, id_domaine);
                
-               ann = new Annonceur(nom_annonceur, inf, dom);
+               ann = new Annonceur(nom_annonceur, inf);
                ann.setId_anonceur(id_annonceur);
+               ann.setDomaine(dom);
                }
             
          

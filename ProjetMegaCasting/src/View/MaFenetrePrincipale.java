@@ -5,6 +5,9 @@
 package View;
 
 import java.awt.CardLayout;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -13,6 +16,8 @@ import javax.swing.JPanel;
  * @author
  * HP
  */
+
+
 public class MaFenetrePrincipale extends javax.swing.JFrame {
     
     private AcceuilForm acceuilform;
@@ -24,11 +29,13 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
     private MetierForm metierform;
     private OffreForm offreform;
     
+    
     public MaFenetrePrincipale() {
-        initComponents();   
-        ChargementLayout();
-        CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
-        c1.show(MaFenetrePrincipale.Panel_principal, "AcceuilCard");
+          
+            initComponents();   
+            ChargementLayout();
+            CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
+            c1.show(MaFenetrePrincipale.Panel_principal, "AcceuilCard");      
     }
     
     
