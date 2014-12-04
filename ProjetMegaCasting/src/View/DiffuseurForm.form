@@ -39,7 +39,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
-                  <Component id="jButton_retour_ajouter_annonceur4" min="-2" pref="160" max="-2" attributes="0"/>
+                  <Component id="jButton_retour_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
@@ -53,7 +53,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jTabbedPane22" min="-2" pref="371" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton_retour_ajouter_annonceur4" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="jButton_retour_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -92,7 +92,7 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                  <Component id="jButton_ajouter_ajouter_anonceur5" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jButton_ajouter_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="101" max="32767" attributes="0"/>
@@ -110,7 +110,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jPanel50" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Component id="jButton_ajouter_ajouter_anonceur5" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="jButton_ajouter_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="63" max="32767" attributes="0"/>
@@ -149,30 +149,30 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField10" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                                          <Component id="jTextField8" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                                          <Component id="jTextField11" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <Component id="jTextField_ajouter_rue" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <Component id="jTextField_ajouter_telfixe" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                          <Component id="jTextField_ajouter_mail" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel16" min="-2" pref="106" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField12" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_ajouter_telport" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel19" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jTextField13" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_ajouter_ville" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel20" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Component id="jTextField14" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_ajouter_cp" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel21" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jTextField15" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_ajouter_pays" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="18" max="32767" attributes="0"/>
@@ -185,37 +185,37 @@
                               <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField11" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_mail" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel15" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_telfixe" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel17" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_telport" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel16" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_rue" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel18" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_ville" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel19" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel20" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_cp" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_pays" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel21" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="14" max="32767" attributes="0"/>
@@ -240,13 +240,13 @@
                         <Property name="text" type="java.lang.String" value="adresse mail"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField8">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_telfixe">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField10">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_rue">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField11">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_mail">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField12">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_telport">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel16">
                       <Properties>
@@ -296,11 +296,11 @@
                         <Property name="text" type="java.lang.String" value="pays"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField13">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_ville">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField14">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_cp">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField15">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_pays">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -329,7 +329,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel23" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextField16" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_ajouter_nom" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
@@ -343,7 +343,7 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel23" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_ajouter_nom" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                           </Group>
@@ -367,16 +367,19 @@
                         <Property name="text" type="java.lang.String" value="nom diffuseur"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField16">
+                    <Component class="javax.swing.JTextField" name="jTextField_ajouter_nom">
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton_ajouter_ajouter_anonceur5">
+                <Component class="javax.swing.JButton" name="jButton_ajouter_diffuseur">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Ajouter"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_ajouter_anonceur5ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_diffuseurActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -401,15 +404,15 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
-                                  <Component id="jButton_ajouter_ajouter_anonceur6" min="-2" pref="160" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                                   <Component id="jPanel80" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
+                                  <Component id="jButton_modifier_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace pref="221" max="32767" attributes="0"/>
@@ -421,9 +424,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                           <Component id="jPanel80" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                          <Component id="jButton_ajouter_ajouter_anonceur6" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace pref="84" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+                          <Component id="jButton_modifier_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace pref="79" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -454,12 +457,12 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel53" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextField41" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_modifier_id" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel54" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jTextField42" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_modifier_nom" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="20" max="32767" attributes="0"/>
@@ -473,12 +476,12 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel53" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_modifier_id" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel54" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_modifier_nom" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
                           </Group>
@@ -502,7 +505,7 @@
                         <Property name="text" type="java.lang.String" value="Identifiant :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField41">
+                    <Component class="javax.swing.JTextField" name="jTextField_modifier_id">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel54">
                       <Properties>
@@ -512,16 +515,19 @@
                         <Property name="text" type="java.lang.String" value="Nom :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField42">
+                    <Component class="javax.swing.JTextField" name="jTextField_modifier_nom">
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton_ajouter_ajouter_anonceur6">
+                <Component class="javax.swing.JButton" name="jButton_modifier_diffuseur">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Modifier"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_ajouter_anonceur6ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_modifier_diffuseurActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -550,7 +556,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
-                                  <Component id="jButton_ajouter_ajouter_anonceur7" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jButton_lister_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
@@ -567,7 +573,7 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jPanel82" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jButton_ajouter_ajouter_anonceur7" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jButton_lister_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -592,13 +598,13 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel85" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" min="-2" pref="651" max="-2" attributes="0"/>
+                                  <Component id="jLabel85" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane1" alignment="0" min="-2" pref="658" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="71" max="32767" attributes="0"/>
+                              <EmptySpace pref="64" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -629,13 +635,20 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable1">
+                        <Component class="javax.swing.JTable" name="jTable_diffuseur">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="3" rowCount="4">
+                              <Table columnCount="10" rowCount="4">
                                 <Column editable="false" title="Identifiant diffuseur" type="java.lang.Integer"/>
                                 <Column editable="false" title="Nom diffuseur" type="java.lang.String"/>
                                 <Column editable="false" title="Identifiant information" type="java.lang.Integer"/>
+                                <Column editable="false" title="Email" type="java.lang.String"/>
+                                <Column editable="false" title="T&#xe9;l&#xe9;phone fixe" type="java.lang.Integer"/>
+                                <Column editable="false" title="T&#xe9;l&#xe9;phone portable" type="java.lang.Integer"/>
+                                <Column editable="false" title="Rue" type="java.lang.String"/>
+                                <Column editable="false" title="Ville" type="java.lang.String"/>
+                                <Column editable="false" title="Code Postal" type="java.lang.Integer"/>
+                                <Column editable="false" title="Pays" type="java.lang.String"/>
                               </Table>
                             </Property>
                           </Properties>
@@ -644,12 +657,15 @@
                     </Container>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton_ajouter_ajouter_anonceur7">
+                <Component class="javax.swing.JButton" name="jButton_lister_diffuseur">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Lister"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_ajouter_anonceur7ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_lister_diffuseurActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
@@ -679,15 +695,15 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jPanel84" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                  <Component id="jButton_ajouter_ajouter_anonceur8" min="-2" pref="160" max="-2" attributes="0"/>
+                                  <Component id="jButton_rechercher_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="22" max="32767" attributes="0"/>
+                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <Component id="jPanel84" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -695,24 +711,29 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPanel84" min="-2" max="-2" attributes="0"/>
-                              <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="13" max="32767" attributes="0"/>
-                          <Component id="jButton_ajouter_ajouter_anonceur8" min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jPanel87" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButton_rechercher_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jPanel84" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton_ajouter_ajouter_anonceur8">
+                <Component class="javax.swing.JButton" name="jButton_rechercher_diffuseur">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Rechercher"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_ajouter_anonceur8ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_rechercher_diffuseurActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel87">
@@ -740,7 +761,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel108" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="jTextField78" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_rechercher_nom" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="52" max="32767" attributes="0"/>
@@ -754,7 +775,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel108" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField78" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_nom" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
                           </Group>
@@ -778,7 +799,7 @@
                         <Property name="text" type="java.lang.String" value="Recherche par nom :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField78">
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_nom">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -812,21 +833,50 @@
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel104" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jTextField75" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <Component id="jTextField_rechercher_resultat_nom" min="-2" pref="120" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <Component id="jLabel103" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jTextField74" min="-2" pref="120" max="-2" attributes="0"/>
+                                              <Component id="jTextField_rechercher_resultat_id" min="-2" pref="120" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel105" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField76" min="-2" pref="120" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="24" max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel105" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel106" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                                                  <Component id="jLabel109" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jTextField_rechercher_resultat_telfixe" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_email" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_id_info" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLabel110" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel111" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel114" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel115" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jLabel116" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jTextField_rechercher_resultat_pays" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_cp" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_ville" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_rue" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                                  <Component id="jTextField_rechercher_resultat_telport" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -836,22 +886,57 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel95" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel103" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField74" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField_rechercher_resultat_id" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel103" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel104" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField75" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField_rechercher_resultat_nom" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel104" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel105" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField76" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jTextField_rechercher_resultat_id_info" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel105" alignment="0" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel106" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_email" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel109" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_telfixe" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel110" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_telport" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel111" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_rue" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel114" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_ville" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel115" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_cp" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jLabel116" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="jTextField_rechercher_resultat_pays" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -873,7 +958,7 @@
                         <Property name="text" type="java.lang.String" value="Identifiant :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField74">
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_id">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel104">
                       <Properties>
@@ -891,9 +976,79 @@
                         <Property name="text" type="java.lang.String" value="Identifiant information:"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField75">
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_nom">
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField76">
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_id_info">
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel106">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Email :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel109">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="T&#xe9;l&#xe9;phone fixe :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel110">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="T&#xe9;l&#xe9;phone portable :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel111">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Rue :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel114">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Ville :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel115">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Code postal :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel116">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="14" style="0"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Pays :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_email">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_telfixe">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_telport">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_rue">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_ville">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_cp">
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="jTextField_rechercher_resultat_pays">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -919,15 +1074,18 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                          <Component id="jPanel86" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
+                                  <Component id="jPanel86" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="247" max="-2" attributes="0"/>
+                                  <Component id="jButton_supprimer_diffuseur" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                           <EmptySpace pref="162" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton_ajouter_ajouter_anonceur9" min="-2" pref="160" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -936,9 +1094,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace pref="105" max="32767" attributes="0"/>
                           <Component id="jPanel86" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="jButton_ajouter_ajouter_anonceur9" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="jButton_supprimer_diffuseur" min="-2" pref="30" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -969,7 +1127,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel113" min="-2" pref="126" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="jTextField95" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jTextField_supprimer_diffuseur" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="84" max="32767" attributes="0"/>
@@ -983,7 +1141,7 @@
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel113" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Component id="jTextField95" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField_supprimer_diffuseur" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
                           </Group>
@@ -1007,23 +1165,26 @@
                         <Property name="text" type="java.lang.String" value="Id du diffuseur :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="jTextField95">
+                    <Component class="javax.swing.JTextField" name="jTextField_supprimer_diffuseur">
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton_ajouter_ajouter_anonceur9">
+                <Component class="javax.swing.JButton" name="jButton_supprimer_diffuseur">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="12" style="1"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Supprimer"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ajouter_ajouter_anonceur9ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_supprimer_diffuseurActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton_retour_ajouter_annonceur4">
+        <Component class="javax.swing.JButton" name="jButton_retour_diffuseur">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="1"/>
@@ -1031,7 +1192,7 @@
             <Property name="text" type="java.lang.String" value="Retour"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_retour_ajouter_annonceur4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_retour_diffuseurActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

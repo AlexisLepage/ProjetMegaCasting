@@ -24,7 +24,7 @@ public class DiffuseurDAO {
             throw new Exception(dif.getNom_diffuseur() + " existe déjà !");
         }
         
-        InformationDAO.CreerInformation(cnx, dif.getId_information());
+        InformationDAO.CreerInformation(cnx, dif.getInformation());
         
         Statement stmt = null;
         
@@ -32,7 +32,7 @@ public class DiffuseurDAO {
             stmt = cnx.createStatement();
             stmt.executeUpdate("INSERT INTO diffuseur (nom_diffuseur, id_information) "
                     + "VALUES ('" + dif.getNom_diffuseur() + "'"                 
-                    + ", " + dif.getId_information().getId_information()
+                    + ", " + dif.getInformation().getId_information()
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_diffuseur) FROM diffuseur");
             if (rs.next()){
@@ -60,7 +60,8 @@ public class DiffuseurDAO {
          try {
              stmt =  cnx.createStatement();
              stmt.executeUpdate("UPDATE diffuseur"
-                    + " SET nom_diffuseur ='" + dif.getNom_diffuseur());
+                    + " SET nom_diffuseur ='" + dif.getNom_diffuseur()+ "'"
+                    + " WHERE id_diffuseur =" + dif.getId_diffuseur() + ";");
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally{
@@ -75,8 +76,11 @@ public class DiffuseurDAO {
         
          try {
              stmt =  cnx.createStatement();
+             
+             stmt.executeUpdate("DELETE FROM information"
+                    + " WHERE id_information = " + dif.getInformation().getId_information() + ";");
              stmt.executeUpdate("DELETE FROM diffuseur"
-                    + " WHERE id = " + dif.getId_diffuseur());
+                    + " WHERE id_diffuseur = " + dif.getId_diffuseur());
          } catch (SQLException ex) {
              ex.printStackTrace();
          }finally {
@@ -123,16 +127,9 @@ public class DiffuseurDAO {
                     stmt.close();
                 } catch (SQLException ex) {
                 }
-            }
-            
-            if(cnx != null){
-                try {
-                    cnx.close();
-                } catch (SQLException ex) {
-                }
-            }
+            }                  
         }
-        return null;
+        return liste;
      
        
     }
@@ -157,7 +154,7 @@ public class DiffuseurDAO {
                Information inf = InformationDAO.TrouverInformationId(cnx, id_information);
                
                dif = new Diffuseur(nom_diffuseur, inf);
-               dif.setId_diffuseur((int)id_diffuseur);
+               dif.setId_diffuseur(id_diffuseur);
                }
             
          

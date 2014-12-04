@@ -4,7 +4,17 @@
  */
 package View;
 
+import Class.Annonceur;
+import Class.Diffuseur;
+import Class.Information;
+import ClassDAO.AnnonceurDAO;
+import ClassDAO.DiffuseurDAO;
 import java.awt.CardLayout;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Collection;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -73,59 +83,73 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel49 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        jTextField_ajouter_telfixe = new javax.swing.JTextField();
+        jTextField_ajouter_rue = new javax.swing.JTextField();
+        jTextField_ajouter_mail = new javax.swing.JTextField();
+        jTextField_ajouter_telport = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jTextField13 = new javax.swing.JTextField();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
+        jTextField_ajouter_ville = new javax.swing.JTextField();
+        jTextField_ajouter_cp = new javax.swing.JTextField();
+        jTextField_ajouter_pays = new javax.swing.JTextField();
         jPanel50 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur5 = new javax.swing.JButton();
+        jTextField_ajouter_nom = new javax.swing.JTextField();
+        jButton_ajouter_diffuseur = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jPanel80 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
+        jTextField_modifier_id = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur6 = new javax.swing.JButton();
+        jTextField_modifier_nom = new javax.swing.JTextField();
+        jButton_modifier_diffuseur = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jPanel82 = new javax.swing.JPanel();
         jLabel85 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton_ajouter_ajouter_anonceur7 = new javax.swing.JButton();
+        jTable_diffuseur = new javax.swing.JTable();
+        jButton_lister_diffuseur = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
-        jButton_ajouter_ajouter_anonceur8 = new javax.swing.JButton();
+        jButton_rechercher_diffuseur = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
         jLabel107 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
-        jTextField78 = new javax.swing.JTextField();
+        jTextField_rechercher_nom = new javax.swing.JTextField();
         jPanel84 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
-        jTextField74 = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_id = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
-        jTextField75 = new javax.swing.JTextField();
-        jTextField76 = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_nom = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_id_info = new javax.swing.JTextField();
+        jLabel106 = new javax.swing.JLabel();
+        jLabel109 = new javax.swing.JLabel();
+        jLabel110 = new javax.swing.JLabel();
+        jLabel111 = new javax.swing.JLabel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jTextField_rechercher_resultat_email = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_telfixe = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_telport = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_rue = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_ville = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_cp = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_pays = new javax.swing.JTextField();
         jPanel18 = new javax.swing.JPanel();
         jPanel86 = new javax.swing.JPanel();
         jLabel112 = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
-        jTextField95 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur9 = new javax.swing.JButton();
-        jButton_retour_ajouter_annonceur4 = new javax.swing.JButton();
+        jTextField_supprimer_diffuseur = new javax.swing.JTextField();
+        jButton_supprimer_diffuseur = new javax.swing.JButton();
+        jButton_retour_diffuseur = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
         jPanel3.setForeground(new java.awt.Color(153, 153, 153));
@@ -173,25 +197,25 @@ public class DiffuseurForm extends javax.swing.JPanel {
                             .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField_ajouter_rue, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_ajouter_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_ajouter_mail, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel49Layout.createSequentialGroup()
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_ajouter_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel49Layout.createSequentialGroup()
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_ajouter_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel49Layout.createSequentialGroup()
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_ajouter_cp, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel49Layout.createSequentialGroup()
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_ajouter_pays, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel49Layout.setVerticalGroup(
@@ -200,31 +224,31 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addComponent(jLabel14)
                 .addGap(30, 30, 30)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_mail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_telport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_rue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_ajouter_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_ajouter_pays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
@@ -250,7 +274,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_ajouter_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel50Layout.setVerticalGroup(
@@ -260,14 +284,15 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_ajouter_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 47, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur5.setText("Ajouter");
-        jButton_ajouter_ajouter_anonceur5.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ajouter_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_diffuseur.setText("Ajouter");
+        jButton_ajouter_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur5ActionPerformed(evt);
+                jButton_ajouter_diffuseurActionPerformed(evt);
             }
         });
 
@@ -282,7 +307,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                         .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
@@ -296,7 +321,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(61, 61, 61)
-                        .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
@@ -329,11 +354,11 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel80Layout.setVerticalGroup(
@@ -343,18 +368,19 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 18, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur6.setText("Modifier");
-        jButton_ajouter_ajouter_anonceur6.addActionListener(new java.awt.event.ActionListener() {
+        jButton_modifier_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_modifier_diffuseur.setText("Modifier");
+        jButton_modifier_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur6ActionPerformed(evt);
+                jButton_modifier_diffuseurActionPerformed(evt);
             }
         });
 
@@ -365,11 +391,11 @@ public class DiffuseurForm extends javax.swing.JPanel {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(254, 254, 254)
-                        .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(197, 197, 197)
-                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(246, 246, 246)
+                        .addComponent(jButton_modifier_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(221, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -377,9 +403,9 @@ public class DiffuseurForm extends javax.swing.JPanel {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
-                .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGap(74, 74, 74)
+                .addComponent(jButton_modifier_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         jTabbedPane22.addTab("Modifier", jPanel15);
@@ -394,22 +420,22 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jLabel85.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel85.setText("Diffuseur");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_diffuseur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Identifiant diffuseur", "Nom diffuseur", "Identifiant information"
+                "Identifiant diffuseur", "Nom diffuseur", "Identifiant information", "Email", "Téléphone fixe", "Téléphone portable", "Rue", "Ville", "Code Postal", "Pays"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -420,7 +446,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable_diffuseur);
 
         javax.swing.GroupLayout jPanel82Layout = new javax.swing.GroupLayout(jPanel82);
         jPanel82.setLayout(jPanel82Layout);
@@ -430,8 +456,8 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel85)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 651, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanel82Layout.setVerticalGroup(
             jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -442,10 +468,11 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jButton_ajouter_ajouter_anonceur7.setText("Lister");
-        jButton_ajouter_ajouter_anonceur7.addActionListener(new java.awt.event.ActionListener() {
+        jButton_lister_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_lister_diffuseur.setText("Lister");
+        jButton_lister_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur7ActionPerformed(evt);
+                jButton_lister_diffuseurActionPerformed(evt);
             }
         });
 
@@ -457,7 +484,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(243, 243, 243)
-                        .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton_lister_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -469,7 +496,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_lister_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
@@ -478,10 +505,11 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel17.setBackground(new java.awt.Color(204, 204, 204));
         jPanel17.setForeground(new java.awt.Color(153, 153, 153));
 
-        jButton_ajouter_ajouter_anonceur8.setText("Rechercher");
-        jButton_ajouter_ajouter_anonceur8.addActionListener(new java.awt.event.ActionListener() {
+        jButton_rechercher_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_rechercher_diffuseur.setText("Rechercher");
+        jButton_rechercher_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur8ActionPerformed(evt);
+                jButton_rechercher_diffuseurActionPerformed(evt);
             }
         });
 
@@ -506,7 +534,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addGroup(jPanel87Layout.createSequentialGroup()
                         .addComponent(jLabel108)
                         .addGap(26, 26, 26)
-                        .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_rechercher_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel87Layout.setVerticalGroup(
@@ -516,7 +544,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_rechercher_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
@@ -536,6 +564,27 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel105.setText("Identifiant information:");
 
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setText("Email :");
+
+        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel109.setText("Téléphone fixe :");
+
+        jLabel110.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel110.setText("Téléphone portable :");
+
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setText("Rue :");
+
+        jLabel114.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel114.setText("Ville :");
+
+        jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel115.setText("Code postal :");
+
+        jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel116.setText("Pays :");
+
         javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
         jPanel84.setLayout(jPanel84Layout);
         jPanel84Layout.setHorizontalGroup(
@@ -551,35 +600,85 @@ public class DiffuseurForm extends javax.swing.JPanel {
                             .addGroup(jPanel84Layout.createSequentialGroup()
                                 .addComponent(jLabel104)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel84Layout.createSequentialGroup()
                                 .addComponent(jLabel103)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(24, 24, 24))
                     .addGroup(jPanel84Layout.createSequentialGroup()
-                        .addComponent(jLabel105)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 24, Short.MAX_VALUE))))
+                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel84Layout.createSequentialGroup()
+                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel105)
+                                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel109))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel84Layout.createSequentialGroup()
+                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel110)
+                                    .addComponent(jLabel111)
+                                    .addComponent(jLabel114)
+                                    .addComponent(jLabel115)
+                                    .addComponent(jLabel116))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 22, Short.MAX_VALUE))))
         );
         jPanel84Layout.setVerticalGroup(
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel84Layout.createSequentialGroup()
                 .addComponent(jLabel95)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 33, Short.MAX_VALUE))
+                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -590,24 +689,26 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
-                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                        .addComponent(jButton_rechercher_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
-                .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_rechercher_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(113, 113, 113))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane22.addTab("Rechercher", jPanel17);
@@ -636,7 +737,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addGroup(jPanel86Layout.createSequentialGroup()
                         .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanel86Layout.setVerticalGroup(
@@ -646,14 +747,15 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 47, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur9.setText("Supprimer");
-        jButton_ajouter_ajouter_anonceur9.addActionListener(new java.awt.event.ActionListener() {
+        jButton_supprimer_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_supprimer_diffuseur.setText("Supprimer");
+        jButton_supprimer_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur9ActionPerformed(evt);
+                jButton_supprimer_diffuseurActionPerformed(evt);
             }
         });
 
@@ -662,31 +764,32 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(247, 247, 247)
+                        .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(162, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(258, 258, 258))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap(105, Short.MAX_VALUE)
                 .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(64, 64, 64))
+                .addGap(34, 34, 34)
+                .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
         );
 
         jTabbedPane22.addTab("Supprimer", jPanel18);
 
-        jButton_retour_ajouter_annonceur4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_retour_ajouter_annonceur4.setText("Retour");
-        jButton_retour_ajouter_annonceur4.addActionListener(new java.awt.event.ActionListener() {
+        jButton_retour_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_retour_diffuseur.setText("Retour");
+        jButton_retour_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_retour_ajouter_annonceur4ActionPerformed(evt);
+                jButton_retour_diffuseurActionPerformed(evt);
             }
         });
 
@@ -696,7 +799,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
             jPanel_diffuseurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
                 .addGap(256, 256, 256)
-                .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButton_retour_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -707,7 +810,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_retour_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -725,45 +828,260 @@ public class DiffuseurForm extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_ajouter_ajouter_anonceur5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur5ActionPerformed
+    private void jButton_ajouter_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_diffuseurActionPerformed
+       
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            Information information = new Information(jTextField_ajouter_mail.getText(),Integer.parseInt(jTextField_ajouter_telfixe.getText()), Integer.parseInt(jTextField_ajouter_telport.getText()), jTextField_ajouter_rue.getText(), jTextField_ajouter_ville.getText(), Integer.parseInt(jTextField_ajouter_cp.getText()), jTextField_ajouter_pays.getText());          
+            Diffuseur diffuseur = new Diffuseur(jTextField_ajouter_nom.getText(), information);
+                   
+            DiffuseurDAO.CreerDiffuseur(cnx, diffuseur);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_ajouter_diffuseurActionPerformed
 
-    private void jButton_ajouter_ajouter_anonceur6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
+    private void jButton_modifier_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_modifier_diffuseurActionPerformed
+       String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Information information = null;          
+            Diffuseur diffuseur =  new Diffuseur(jTextField_modifier_nom.getText(), information);         
+            diffuseur.setId_diffuseur(Integer.parseInt(jTextField_modifier_id.getText()));
+            
+            DiffuseurDAO.ModifierDiffuseur(cnx, diffuseur);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_modifier_diffuseurActionPerformed
 
-    private void jButton_ajouter_ajouter_anonceur7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
+    private void jButton_lister_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_lister_diffuseurActionPerformed
+       
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+             
+            DefaultTableModel model = (DefaultTableModel) jTable_diffuseur.getModel();
 
-    private void jButton_ajouter_ajouter_anonceur8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
+            DiffuseurDAO diffuseurDAO = new DiffuseurDAO();
+            Collection<Diffuseur> diffuseurs = DiffuseurDAO.ListerDiffuseur(cnx);
 
-    private void jButton_ajouter_ajouter_anonceur9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
 
-    private void jButton_retour_ajouter_annonceur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_retour_ajouter_annonceur4ActionPerformed
+            for (Diffuseur d : diffuseurs){
+                model.addRow(new Object[] {
+                    d.getId_diffuseur(),
+                    d.getNom_diffuseur(),
+                    d.getInformation().getId_information(),
+                    d.getInformation().getMail_information(),
+                    d.getInformation().getTel_fixe_information(),
+                    d.getInformation().getTel_port_information(),
+                    d.getInformation().getRue_information(),
+                    d.getInformation().getVille_information(),
+                    d.getInformation().getCp_information(),
+                    d.getInformation().getPays_information()
+                
+                });
+
+            }
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !");                                                                   
+       
+    }//GEN-LAST:event_jButton_lister_diffuseurActionPerformed
+
+    private void jButton_rechercher_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rechercher_diffuseurActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Diffuseur diffuseur = DiffuseurDAO.TrouverDiffuseurNom(cnx, jTextField_rechercher_nom.getText());
+            jTextField_rechercher_resultat_id.setText(Long.toString(diffuseur.getId_diffuseur()));
+            jTextField_rechercher_resultat_nom.setText(diffuseur.getNom_diffuseur());
+            jTextField_rechercher_resultat_id_info.setText(Long.toString(diffuseur.getInformation().getId_information()));
+            jTextField_rechercher_resultat_email.setText(diffuseur.getInformation().getMail_information());
+            jTextField_rechercher_resultat_telfixe.setText(Long.toString(diffuseur.getInformation().getTel_fixe_information()));
+            jTextField_rechercher_resultat_telport.setText(Long.toString(diffuseur.getInformation().getTel_port_information()));
+            jTextField_rechercher_resultat_rue.setText(diffuseur.getInformation().getRue_information());
+            jTextField_rechercher_resultat_ville.setText(diffuseur.getInformation().getVille_information());
+            jTextField_rechercher_resultat_cp.setText(Long.toString(diffuseur.getInformation().getCp_information()));
+            jTextField_rechercher_resultat_pays.setText(diffuseur.getInformation().getPays_information());
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !");   
+    }//GEN-LAST:event_jButton_rechercher_diffuseurActionPerformed
+
+    private void jButton_supprimer_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_supprimer_diffuseurActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Diffuseur diffuseur  = DiffuseurDAO.TrouverDiffuseurId(cnx, Integer.parseInt(jTextField_supprimer_diffuseur.getText()));
+            DiffuseurDAO.SupprimerDiffuseur(cnx, diffuseur);
+           
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_supprimer_diffuseurActionPerformed
+
+    private void jButton_retour_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_retour_diffuseurActionPerformed
+        RetourMenu();
+    }//GEN-LAST:event_jButton_retour_diffuseurActionPerformed
+
+    private void TextFieldBlanc(){
+        jTextField_ajouter_nom.setText("");
+        jTextField_ajouter_mail.setText("");
+        jTextField_ajouter_telfixe.setText("");
+        jTextField_ajouter_telport.setText("");
+        jTextField_ajouter_rue.setText("");
+        jTextField_ajouter_ville.setText("");
+        jTextField_ajouter_cp.setText("");
+        jTextField_ajouter_pays.setText("");
+        jTextField_modifier_id.setText("");
+        jTextField_modifier_nom.setText("");
+        jTextField_rechercher_nom.setText("");
+        jTextField_rechercher_resultat_cp.setText("");
+        jTextField_rechercher_resultat_email.setText("");
+        jTextField_rechercher_resultat_id.setText("");
+        jTextField_rechercher_resultat_id_info.setText("");
+        jTextField_rechercher_resultat_nom.setText("");
+        jTextField_rechercher_resultat_pays.setText(""); 
+        jTextField_rechercher_resultat_rue.setText("");
+        jTextField_rechercher_resultat_telfixe.setText("");
+        jTextField_rechercher_resultat_telport.setText("");
+        jTextField_rechercher_resultat_ville.setText("");
+        jTextField_supprimer_diffuseur.setText("");
+   }
+    
+    private void RetourMenu(){
+        TextFieldBlanc();
         CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
         c1.show(MaFenetrePrincipale.Panel_principal, "acceuilCard");
-    }//GEN-LAST:event_jButton_retour_ajouter_annonceur4ActionPerformed
-
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur5;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur6;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur7;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur8;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur9;
-    private javax.swing.JButton jButton_retour_ajouter_annonceur4;
+    private javax.swing.JButton jButton_ajouter_diffuseur;
+    private javax.swing.JButton jButton_lister_diffuseur;
+    private javax.swing.JButton jButton_modifier_diffuseur;
+    private javax.swing.JButton jButton_rechercher_diffuseur;
+    private javax.swing.JButton jButton_retour_diffuseur;
+    private javax.swing.JButton jButton_supprimer_diffuseur;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel110;
+    private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
+    private javax.swing.JLabel jLabel114;
+    private javax.swing.JLabel jLabel115;
+    private javax.swing.JLabel jLabel116;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -794,21 +1112,28 @@ public class DiffuseurForm extends javax.swing.JPanel {
     protected javax.swing.JPanel jPanel_diffuseur;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane22;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
-    private javax.swing.JTextField jTextField76;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField95;
+    private javax.swing.JTable jTable_diffuseur;
+    private javax.swing.JTextField jTextField_ajouter_cp;
+    private javax.swing.JTextField jTextField_ajouter_mail;
+    private javax.swing.JTextField jTextField_ajouter_nom;
+    private javax.swing.JTextField jTextField_ajouter_pays;
+    private javax.swing.JTextField jTextField_ajouter_rue;
+    private javax.swing.JTextField jTextField_ajouter_telfixe;
+    private javax.swing.JTextField jTextField_ajouter_telport;
+    private javax.swing.JTextField jTextField_ajouter_ville;
+    private javax.swing.JTextField jTextField_modifier_id;
+    private javax.swing.JTextField jTextField_modifier_nom;
+    private javax.swing.JTextField jTextField_rechercher_nom;
+    private javax.swing.JTextField jTextField_rechercher_resultat_cp;
+    private javax.swing.JTextField jTextField_rechercher_resultat_email;
+    private javax.swing.JTextField jTextField_rechercher_resultat_id;
+    private javax.swing.JTextField jTextField_rechercher_resultat_id_info;
+    private javax.swing.JTextField jTextField_rechercher_resultat_nom;
+    private javax.swing.JTextField jTextField_rechercher_resultat_pays;
+    private javax.swing.JTextField jTextField_rechercher_resultat_rue;
+    private javax.swing.JTextField jTextField_rechercher_resultat_telfixe;
+    private javax.swing.JTextField jTextField_rechercher_resultat_telport;
+    private javax.swing.JTextField jTextField_rechercher_resultat_ville;
+    private javax.swing.JTextField jTextField_supprimer_diffuseur;
     // End of variables declaration//GEN-END:variables
 }

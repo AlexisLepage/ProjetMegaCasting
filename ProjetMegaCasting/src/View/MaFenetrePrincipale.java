@@ -23,8 +23,7 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
     private AcceuilForm acceuilform;
     private AnnonceurForm annonceurform;
     private DiffuseurForm diffuseurform;
-    private DomaineFrom domaineform;
-    private InformationForm informationform;
+    private DomaineFrom domaineform;  
     private MediaForm mediaform;
     private MetierForm metierform;
     private OffreForm offreform;
@@ -54,10 +53,7 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
         
         domaineform = new DomaineFrom(this);
         Panel_principal.add(domaineform, "domaineCard");
-        
-        informationform = new InformationForm(this);
-        Panel_principal.add(informationform, "informationCard");
-        
+             
         mediaform = new MediaForm(this);
         Panel_principal.add(mediaform, "mediaCard");
         

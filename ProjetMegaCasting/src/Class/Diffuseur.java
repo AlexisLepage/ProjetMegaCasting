@@ -12,13 +12,13 @@ package Class;
 public class Diffuseur {
     private long id_diffuseur;
     private String nom_diffuseur;
-    private Information id_information;
+    private Information information;
 
     public long getId_diffuseur() {
         return id_diffuseur;
     }
 
-    public void setId_diffuseur(int id_diffuseur) {
+    public void setId_diffuseur(long id_diffuseur) {
         this.id_diffuseur = id_diffuseur;
     }
 
@@ -30,17 +30,19 @@ public class Diffuseur {
         this.nom_diffuseur = nom_diffuseur;
     }
 
-    public Information getId_information() {
-        return id_information;
+    public Information getInformation() {
+        return information;
     }
 
-    public void setId_information(Information id_information) {
-        this.id_information = id_information;
+    public void setInformation(Information information) {
+        this.information = information;
     }
 
-    public Diffuseur(String nom_diffuseur, Information id_information) {
+    public Diffuseur(String nom_diffuseur, Information information) {
         this.nom_diffuseur = nom_diffuseur;
-        this.id_information = id_information;
+        this.information = information;
     }
+
+   
      
 }
