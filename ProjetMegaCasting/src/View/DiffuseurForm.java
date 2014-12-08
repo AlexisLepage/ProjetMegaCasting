@@ -864,7 +864,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton_ajouter_diffuseurActionPerformed
 
     private void jButton_modifier_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_modifier_diffuseurActionPerformed
-       String driver = "com.mysql.jdbc.Driver";
+        String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost/megacasting";
         String utilisateur = "root";
         String password = "";          

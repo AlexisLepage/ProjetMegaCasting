@@ -4,7 +4,17 @@
  */
 package View;
 
+import Class.Diffuseur;
+import Class.Domaine;
+import Class.Information;
+import ClassDAO.DiffuseurDAO;
+import ClassDAO.DomaineDAO;
 import java.awt.CardLayout;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Collection;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -73,40 +83,40 @@ public class DomaineFrom extends javax.swing.JPanel {
         jPanel50 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur5 = new javax.swing.JButton();
+        jTextField_ajouter_nom = new javax.swing.JTextField();
+        jButton_ajouter_domaine = new javax.swing.JButton();
         jPanel15 = new javax.swing.JPanel();
         jPanel80 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jTextField41 = new javax.swing.JTextField();
+        jTextField_modifier_id = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jTextField42 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur6 = new javax.swing.JButton();
+        jTextField_modifier_nom = new javax.swing.JTextField();
+        jButton_modifier_domaine = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jPanel82 = new javax.swing.JPanel();
         jLabel85 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton_ajouter_ajouter_anonceur7 = new javax.swing.JButton();
+        jTable_lister_domaine = new javax.swing.JTable();
+        jButton_lister_domaine = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
         jPanel86 = new javax.swing.JPanel();
         jLabel112 = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
-        jTextField95 = new javax.swing.JTextField();
-        jButton_ajouter_ajouter_anonceur9 = new javax.swing.JButton();
+        jTextField_supprimer_id = new javax.swing.JTextField();
+        jButton_supprimer_domaine = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
-        jButton_ajouter_ajouter_anonceur8 = new javax.swing.JButton();
+        jButton_rechercher_domaine = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
         jLabel107 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
-        jTextField78 = new javax.swing.JTextField();
+        jTextField_rechercher_nom = new javax.swing.JTextField();
         jPanel84 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
-        jTextField74 = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_id = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
-        jTextField75 = new javax.swing.JTextField();
+        jTextField_rechercher_resultat_nom = new javax.swing.JTextField();
         jButton_retour_ajouter_annonceur4 = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
@@ -133,7 +143,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_ajouter_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel50Layout.setVerticalGroup(
@@ -143,15 +153,15 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_ajouter_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 47, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_ajouter_ajouter_anonceur5.setText("Ajouter");
-        jButton_ajouter_ajouter_anonceur5.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ajouter_domaine.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_domaine.setText("Ajouter");
+        jButton_ajouter_domaine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur5ActionPerformed(evt);
+                jButton_ajouter_domaineActionPerformed(evt);
             }
         });
 
@@ -163,7 +173,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(262, 262, 262)
-                        .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton_ajouter_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(207, 207, 207)
                         .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -175,7 +185,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(69, 69, 69)
                 .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_ajouter_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(116, Short.MAX_VALUE))
         );
 
@@ -208,11 +218,11 @@ public class DomaineFrom extends javax.swing.JPanel {
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel80Layout.setVerticalGroup(
@@ -222,19 +232,19 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 13, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_ajouter_ajouter_anonceur6.setText("Modifier");
-        jButton_ajouter_ajouter_anonceur6.addActionListener(new java.awt.event.ActionListener() {
+        jButton_modifier_domaine.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_modifier_domaine.setText("Modifier");
+        jButton_modifier_domaine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur6ActionPerformed(evt);
+                jButton_modifier_domaineActionPerformed(evt);
             }
         });
 
@@ -249,7 +259,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                         .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGap(264, 264, 264)
-                        .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_modifier_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(213, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
@@ -258,7 +268,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(66, 66, 66)
                 .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_modifier_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -274,7 +284,7 @@ public class DomaineFrom extends javax.swing.JPanel {
         jLabel85.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel85.setText("Domaine");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_lister_domaine.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -300,7 +310,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTable_lister_domaine);
 
         javax.swing.GroupLayout jPanel82Layout = new javax.swing.GroupLayout(jPanel82);
         jPanel82.setLayout(jPanel82Layout);
@@ -322,11 +332,11 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jButton_ajouter_ajouter_anonceur7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_ajouter_ajouter_anonceur7.setText("Lister");
-        jButton_ajouter_ajouter_anonceur7.addActionListener(new java.awt.event.ActionListener() {
+        jButton_lister_domaine.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_lister_domaine.setText("Lister");
+        jButton_lister_domaine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur7ActionPerformed(evt);
+                jButton_lister_domaineActionPerformed(evt);
             }
         });
 
@@ -341,7 +351,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                         .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
                         .addGap(264, 264, 264)
-                        .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_lister_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
@@ -350,7 +360,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_lister_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
@@ -380,7 +390,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                     .addGroup(jPanel86Layout.createSequentialGroup()
                         .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
-                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_supprimer_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         jPanel86Layout.setVerticalGroup(
@@ -390,15 +400,15 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_supprimer_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 47, Short.MAX_VALUE))
         );
 
-        jButton_ajouter_ajouter_anonceur9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_ajouter_ajouter_anonceur9.setText("Supprimer");
-        jButton_ajouter_ajouter_anonceur9.addActionListener(new java.awt.event.ActionListener() {
+        jButton_supprimer_domaine.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_supprimer_domaine.setText("Supprimer");
+        jButton_supprimer_domaine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur9ActionPerformed(evt);
+                jButton_supprimer_domaineActionPerformed(evt);
             }
         });
 
@@ -410,7 +420,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(243, 243, 243)
-                        .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton_supprimer_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(142, 142, 142)
                         .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -422,7 +432,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addContainerGap(90, Short.MAX_VALUE)
                 .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(46, 46, 46)
-                .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_supprimer_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
         );
 
@@ -431,11 +441,11 @@ public class DomaineFrom extends javax.swing.JPanel {
         jPanel17.setBackground(new java.awt.Color(204, 204, 204));
         jPanel17.setForeground(new java.awt.Color(153, 153, 153));
 
-        jButton_ajouter_ajouter_anonceur8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_ajouter_ajouter_anonceur8.setText("Rechercher");
-        jButton_ajouter_ajouter_anonceur8.addActionListener(new java.awt.event.ActionListener() {
+        jButton_rechercher_domaine.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_rechercher_domaine.setText("Rechercher");
+        jButton_rechercher_domaine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_ajouter_ajouter_anonceur8ActionPerformed(evt);
+                jButton_rechercher_domaineActionPerformed(evt);
             }
         });
 
@@ -460,7 +470,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                     .addGroup(jPanel87Layout.createSequentialGroup()
                         .addComponent(jLabel108)
                         .addGap(26, 26, 26)
-                        .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField_rechercher_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel87Layout.setVerticalGroup(
@@ -470,7 +480,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_rechercher_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
@@ -502,11 +512,11 @@ public class DomaineFrom extends javax.swing.JPanel {
                             .addGroup(jPanel84Layout.createSequentialGroup()
                                 .addComponent(jLabel104)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel84Layout.createSequentialGroup()
                                 .addComponent(jLabel103)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
-                                .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(24, 24, 24))))
         );
         jPanel84Layout.setVerticalGroup(
@@ -516,11 +526,11 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 25, Short.MAX_VALUE))
         );
 
@@ -532,7 +542,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(117, 117, 117)
-                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButton_rechercher_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -549,7 +559,7 @@ public class DomaineFrom extends javax.swing.JPanel {
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(77, 77, 77)
-                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton_rechercher_domaine, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(156, Short.MAX_VALUE))
         );
 
@@ -599,38 +609,206 @@ public class DomaineFrom extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_ajouter_ajouter_anonceur5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur5ActionPerformed
+    private void jButton_ajouter_domaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_domaineActionPerformed
+        
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Domaine domaine = new Domaine(jTextField_ajouter_nom.getText());
+                   
+            DomaineDAO.CreerDomaine(cnx, domaine);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_ajouter_domaineActionPerformed
 
-    private void jButton_ajouter_ajouter_anonceur6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
+    private void jButton_modifier_domaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_modifier_domaineActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+                   
+            Domaine domaine =  new Domaine(jTextField_modifier_nom.getText());         
+            domaine.setId_domaine(Integer.parseInt(jTextField_modifier_id.getText()));
+            
+           DomaineDAO.ModifierDomaine(cnx, domaine);
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_modifier_domaineActionPerformed
 
-    private void jButton_ajouter_ajouter_anonceur7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
+    private void jButton_lister_domaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_lister_domaineActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+             
+            DefaultTableModel model = (DefaultTableModel) jTable_lister_domaine.getModel();
 
-    private void jButton_ajouter_ajouter_anonceur8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
+            DomaineDAO domaineDAO = new DomaineDAO();
+            Collection<Domaine> domaines = DomaineDAO.ListerDomaine(cnx);
 
-    private void jButton_ajouter_ajouter_anonceur9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
+
+            for (Domaine d : domaines){
+                model.addRow(new Object[] {
+                    d.getId_domaine(),
+                    d.getLib_domaine(),           
+                });
+
+            }
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !");      
+    }//GEN-LAST:event_jButton_lister_domaineActionPerformed
+
+    private void jButton_rechercher_domaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rechercher_domaineActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Domaine domaine = DomaineDAO.TrouverDomaineNom(cnx, jTextField_rechercher_nom.getText());
+            jTextField_rechercher_resultat_id.setText(Long.toString(domaine.getId_domaine()));
+            jTextField_rechercher_resultat_nom.setText(domaine.getLib_domaine());
+           
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !");   
+    }//GEN-LAST:event_jButton_rechercher_domaineActionPerformed
+
+    private void jButton_supprimer_domaineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_supprimer_domaineActionPerformed
+        String driver = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://localhost/megacasting";
+        String utilisateur = "root";
+        String password = "";          
+       
+       Connection cnx = null;             
+       
+        try {
+            cnx = DriverManager.getConnection(url, utilisateur, password);
+            
+            System.out.println("Connexion réussi !"); 
+            
+            Domaine domaine = DomaineDAO.TrouverDomaineId(cnx, Integer.parseInt(jTextField_supprimer_id.getText()));   
+            DomaineDAO.SupprimerDomaine(cnx, domaine);
+           
+            
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }finally{
+            
+            if(cnx != null){
+                try {
+                    cnx.close();
+                } catch (SQLException ex) {
+                }
+            }
+        }
+        
+        System.out.println("Connexion fermé !"); 
+        
+        RetourMenu();
+    }//GEN-LAST:event_jButton_supprimer_domaineActionPerformed
 
     private void jButton_retour_ajouter_annonceur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_retour_ajouter_annonceur4ActionPerformed
         CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
         c1.show(MaFenetrePrincipale.Panel_principal, "acceuilCard");
     }//GEN-LAST:event_jButton_retour_ajouter_annonceur4ActionPerformed
 
+    
+     private void RetourMenu(){   
+        CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
+        c1.show(MaFenetrePrincipale.Panel_principal, "acceuilCard");
+    }
+     
+     
+     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur5;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur6;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur7;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur8;
-    private javax.swing.JButton jButton_ajouter_ajouter_anonceur9;
+    private javax.swing.JButton jButton_ajouter_domaine;
+    private javax.swing.JButton jButton_lister_domaine;
+    private javax.swing.JButton jButton_modifier_domaine;
+    private javax.swing.JButton jButton_rechercher_domaine;
     private javax.swing.JButton jButton_retour_ajouter_annonceur4;
+    private javax.swing.JButton jButton_supprimer_domaine;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel107;
@@ -658,13 +836,13 @@ public class DomaineFrom extends javax.swing.JPanel {
     protected javax.swing.JPanel jPanel_domaine;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane22;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField41;
-    private javax.swing.JTextField jTextField42;
-    private javax.swing.JTextField jTextField74;
-    private javax.swing.JTextField jTextField75;
-    private javax.swing.JTextField jTextField78;
-    private javax.swing.JTextField jTextField95;
+    private javax.swing.JTable jTable_lister_domaine;
+    private javax.swing.JTextField jTextField_ajouter_nom;
+    private javax.swing.JTextField jTextField_modifier_id;
+    private javax.swing.JTextField jTextField_modifier_nom;
+    private javax.swing.JTextField jTextField_rechercher_nom;
+    private javax.swing.JTextField jTextField_rechercher_resultat_id;
+    private javax.swing.JTextField jTextField_rechercher_resultat_nom;
+    private javax.swing.JTextField jTextField_supprimer_id;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,12 +12,7 @@ package Class;
 public class Metier {
     private long id_metier;
     private String lib_metier;
-    private Domaine domaine;
-
-    public Metier(String lib_metier, Domaine domaine) {
-        this.lib_metier = lib_metier;
-        this.domaine = domaine;
-    }
+ 
 
     public long getId_metier() {
         return id_metier;
@@ -35,12 +30,9 @@ public class Metier {
         this.lib_metier = lib_metier;
     }
 
-    public Domaine getDomaine() {
-        return domaine;
+    public Metier(String lib_metier) {
+        this.lib_metier = lib_metier;
     }
 
-    public void setDomaine(Domaine domaine) {
-        this.domaine = domaine;
-    }
     
 }

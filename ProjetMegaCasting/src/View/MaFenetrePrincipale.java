@@ -58,7 +58,7 @@ public class MaFenetrePrincipale extends javax.swing.JFrame {
         Panel_principal.add(mediaform, "mediaCard");
         
         metierform = new MetierForm(this);
-        Panel_principal.add(metierform, "metierfCard");
+        Panel_principal.add(metierform, "metierCard");
         
         offreform = new OffreForm(this);
         Panel_principal.add(offreform, "offreCard");

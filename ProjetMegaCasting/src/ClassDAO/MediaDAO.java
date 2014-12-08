@@ -26,16 +26,13 @@ public class MediaDAO {
             throw new Exception(med.getUrl_media() + " existe déjà !");
         }
         
-        Type_MediaDAO.CreerType_Media(cnx, med.getType_media());
-        
         Statement stmt = null;
         
         try {
             stmt = cnx.createStatement();
-            stmt.executeUpdate("INSERT INTO media (url_media, poi_media, id_type_media) "
+            stmt.executeUpdate("INSERT INTO media (url_media, poi_media) "
                     + "VALUES ('" + med.getUrl_media() + "'"                 
-                    + ", " + med.getPoi_media()
-                    + ", " + med.getType_media().getId_type_media()
+                    + ", " + med.getPoi_media()      
                     + ")");
             ResultSet rs = stmt.executeQuery("SELECT MAX(id_media) FROM media");
             if (rs.next()){
@@ -82,8 +79,7 @@ public class MediaDAO {
             stmt = cnx.createStatement();
             stmt.executeUpdate("DELETE FROM media "
                     +" WHERE id_media = " + med.getId_media());
-            
-        Type_MediaDAO.TrouverType_MediaId(cnx, med.getType_media().getId_type_media());     
+         
             
         } catch (Exception ex) {
          ex.printStackTrace();
@@ -103,19 +99,15 @@ public class MediaDAO {
         Statement stmt = null;
         try {
             stmt = cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media, id_type_media"
+            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media"
             + " FROM media;");
             while(rs.next()){
                 long id = rs.getLong("id_media");
                 String url_media = rs.getString(2);    
                 int poi_media = rs.getInt(3);      
-                long id_type_media = rs.getLong(4);           
                 
-                Type_Media typ_med = Type_MediaDAO.TrouverType_MediaId(cnx, id_type_media);            
-                
-                Media med = new Media(url_media, poi_media, typ_med);
-                med.setId_media(id_type_media);
-                
+                Media med = new Media(url_media, poi_media);
+               
                 liste.add(med);
             }
         } catch (Exception ex) {
@@ -137,7 +129,7 @@ public class MediaDAO {
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media, id_type_media"
+            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media"
                     + " FROM media"
                    + " WHERE id_media ='" + id_media + "';");
             
@@ -145,12 +137,8 @@ public class MediaDAO {
              
                String url_media = rs.getString(2);                           
                int poi_media = rs.getInt(3);
-               long id_type_media = rs.getLong(4);
-                
                
-               Type_Media typ_med = Type_MediaDAO.TrouverType_MediaId(cnx, id_type_media);           
-               
-               med = new Media(url_media, poi_media, typ_med);
+               med = new Media(url_media, poi_media);
                med.setId_media(id_media);
                }
             
@@ -171,14 +159,14 @@ public class MediaDAO {
              
            }
        
-    private static Media TrouverMediaUrl(Connection cnx, String url_media) {
+    public static Media TrouverMediaUrl(Connection cnx, String url_media) {
          Media med = null;
         Statement stmt = null;
         
         try {
             
             stmt =  cnx.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media, id_type_media"
+            ResultSet rs = stmt.executeQuery("SELECT id_media, url_media, poi_media"
                     + " FROM media"
                    + " WHERE url_media ='" + url_media + "';");
             
@@ -186,12 +174,8 @@ public class MediaDAO {
              
                long id_media = rs.getLong(1);                          
                int poi_media = rs.getInt(3);
-               long id_type_media = rs.getLong(4);
-                
-               
-               Type_Media typ_med = Type_MediaDAO.TrouverType_MediaId(cnx, id_type_media);           
-               
-               med = new Media(url_media, poi_media, typ_med);
+                 
+               med = new Media(url_media, poi_media);
                med.setId_media(id_media);
                }
             

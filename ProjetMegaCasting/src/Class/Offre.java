@@ -148,7 +148,7 @@ public class Offre {
         this.media = media;
     }
 
-    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil_offre, Annonceur annonceur, Contrat contrat, Metier metier, Domaine domaine, Diffuseur diffuseur, Media media) {
+    public Offre(String int_offre, String ref_offre, Date date_offre, int duree_offre, Date date_deb_offre, String loc_offre, String desc_poste_offre, String desc_profil_offre, Annonceur annonceur, Contrat contrat, Metier metier, Domaine domaine) {
         this.int_offre = int_offre;
         this.ref_offre = ref_offre;
         this.date_offre = date_offre;
@@ -160,9 +160,7 @@ public class Offre {
         this.annonceur = annonceur;
         this.contrat = contrat;
         this.metier = metier;
-        this.domaine = domaine;
-        this.diffuseur = diffuseur;
-        this.media = media;
+        this.domaine = domaine;    
     }
 
    

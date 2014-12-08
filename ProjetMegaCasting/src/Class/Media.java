@@ -14,7 +14,7 @@ public class Media {
     private long id_media;
     private String url_media;
     private int poi_media;
-    private Type_Media type_media;
+   
 
     public long getId_media() {
         return id_media;
@@ -40,18 +40,12 @@ public class Media {
         this.poi_media = poi_media;
     }
 
-    public Type_Media getType_media() {
-        return type_media;
-    }
+    
 
-    public void setType_media(Type_Media type_media) {
-        this.type_media = type_media;
-    }
-
-    public Media(String url_media, int poi_media, Type_Media type_media) {
+    public Media(String url_media, int poi_media) {
         this.url_media = url_media;
         this.poi_media = poi_media;
-        this.type_media = type_media;
+      
     }
     
     
