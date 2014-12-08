@@ -55,12 +55,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="Panel_principal" alignment="1" pref="700" max="32767" attributes="0"/>
+          <Component id="Panel_principal" alignment="1" pref="720" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="Panel_principal" alignment="0" pref="450" max="32767" attributes="0"/>
+          <Component id="Panel_principal" alignment="0" pref="500" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>

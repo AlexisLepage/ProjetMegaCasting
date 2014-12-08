@@ -80,28 +80,6 @@ public class AnnonceurForm extends javax.swing.JPanel {
 
         jPanel_annonceur = new javax.swing.JPanel();
         jTabbedPane_annonceur = new javax.swing.JTabbedPane();
-        jPanel_annonceur_ajouter = new javax.swing.JPanel();
-        jPanel_ajouter_information = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField_ajouter_telfixe = new javax.swing.JTextField();
-        jTextField_ajouter_rue = new javax.swing.JTextField();
-        jTextField_ajouter_mail = new javax.swing.JTextField();
-        jTextField_ajouter_telport = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jTextField_ajouter_ville = new javax.swing.JTextField();
-        jTextField_ajouter_cp = new javax.swing.JTextField();
-        jTextField_ajouter_pays = new javax.swing.JTextField();
-        jPanel_ajouter_annonceur = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextFiel_ajouter_nom = new javax.swing.JTextField();
-        jButton_ajouter_anonceur = new javax.swing.JButton();
         jPanel_annonceur_modifier = new javax.swing.JPanel();
         jPanel80 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
@@ -110,12 +88,6 @@ public class AnnonceurForm extends javax.swing.JPanel {
         jLabel54 = new javax.swing.JLabel();
         jTextField_modifier_nom = new javax.swing.JTextField();
         jButton_modifier_annonceur = new javax.swing.JButton();
-        jPanel_annonceur_lister = new javax.swing.JPanel();
-        jPanel82 = new javax.swing.JPanel();
-        jLabel85 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_annonceur = new javax.swing.JTable();
-        jButton_lister_annonceur = new javax.swing.JButton();
         jPanel_annonceur_rechercher = new javax.swing.JPanel();
         jButton_rechercher_annonceur = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
@@ -150,27 +122,485 @@ public class AnnonceurForm extends javax.swing.JPanel {
         jLabel113 = new javax.swing.JLabel();
         jTextField_supprimer_annonceur = new javax.swing.JTextField();
         jButton_spprimer_annonceur = new javax.swing.JButton();
+        jPanel_annonceur_ajouter = new javax.swing.JPanel();
+        jPanel_ajouter_information = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField_ajouter_telfixe = new javax.swing.JTextField();
+        jTextField_ajouter_rue = new javax.swing.JTextField();
+        jTextField_ajouter_mail = new javax.swing.JTextField();
+        jTextField_ajouter_telport = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jTextField_ajouter_ville = new javax.swing.JTextField();
+        jTextField_ajouter_cp = new javax.swing.JTextField();
+        jTextField_ajouter_pays = new javax.swing.JTextField();
+        jPanel_ajouter_annonceur = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jTextFiel_ajouter_nom = new javax.swing.JTextField();
+        jButton_ajouter_anonceur = new javax.swing.JButton();
+        jPanel_annonceur_lister = new javax.swing.JPanel();
+        jPanel82 = new javax.swing.JPanel();
+        jLabel85 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable_annonceur = new javax.swing.JTable();
+        jButton_lister_annonceur = new javax.swing.JButton();
         jButton_retour_annonceur = new javax.swing.JButton();
 
-        jPanel_annonceur_ajouter.setBackground(new java.awt.Color(204, 204, 204));
+        setPreferredSize(new java.awt.Dimension(720, 480));
+
+        jPanel_annonceur.setBackground(new java.awt.Color(14, 14, 14));
+        jPanel_annonceur.setPreferredSize(new java.awt.Dimension(720, 500));
+
+        jTabbedPane_annonceur.setBackground(new java.awt.Color(51, 51, 51));
+        jTabbedPane_annonceur.setForeground(new java.awt.Color(51, 51, 51));
+
+        jPanel_annonceur_modifier.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_annonceur_modifier.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
+        jPanel_annonceur_modifier.setForeground(new java.awt.Color(153, 153, 153));
+
+        jPanel80.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel80.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel52.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel52.setText("Annonceur");
+
+        jLabel53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel53.setText("nom :");
+
+        jTextField_modfier_identifiant.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel54.setText("Identifiant :");
+
+        jTextField_modifier_nom.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
+        jPanel80.setLayout(jPanel80Layout);
+        jPanel80Layout.setHorizontalGroup(
+            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel80Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel52)
+                    .addGroup(jPanel80Layout.createSequentialGroup()
+                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel80Layout.createSequentialGroup()
+                        .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField_modfier_identifiant, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanel80Layout.setVerticalGroup(
+            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel80Layout.createSequentialGroup()
+                .addComponent(jLabel52)
+                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel80Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(jPanel80Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_modfier_identifiant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 32, Short.MAX_VALUE))))
+        );
+
+        jButton_modifier_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_modifier_annonceur.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_modifier_annonceur.setText("Modifier");
+        jButton_modifier_annonceur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_modifier_annonceurActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_annonceur_modifierLayout = new javax.swing.GroupLayout(jPanel_annonceur_modifier);
+        jPanel_annonceur_modifier.setLayout(jPanel_annonceur_modifierLayout);
+        jPanel_annonceur_modifierLayout.setHorizontalGroup(
+            jPanel_annonceur_modifierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
+                .addGap(220, 220, 220)
+                .addComponent(jPanel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(219, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_annonceur_modifierLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_modifier_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(269, 269, 269))
+        );
+        jPanel_annonceur_modifierLayout.setVerticalGroup(
+            jPanel_annonceur_modifierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jPanel80, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addComponent(jButton_modifier_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(140, Short.MAX_VALUE))
+        );
+
+        jTabbedPane_annonceur.addTab("Modifier", jPanel_annonceur_modifier);
+
+        jPanel_annonceur_rechercher.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_annonceur_rechercher.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
+        jPanel_annonceur_rechercher.setForeground(new java.awt.Color(153, 153, 153));
+
+        jButton_rechercher_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_rechercher_annonceur.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_rechercher_annonceur.setText("Rechercher");
+        jButton_rechercher_annonceur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_rechercher_annonceurActionPerformed(evt);
+            }
+        });
+
+        jPanel87.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel87.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel107.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel107.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel107.setText("Annonceur");
+
+        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel108.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel108.setText("Recherche par nom :");
+
+        jTextField_rechercher_annonceur_nom.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
+        jPanel87.setLayout(jPanel87Layout);
+        jPanel87Layout.setHorizontalGroup(
+            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel87Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel107)
+                    .addGroup(jPanel87Layout.createSequentialGroup()
+                        .addComponent(jLabel108)
+                        .addGap(26, 26, 26)
+                        .addComponent(jTextField_rechercher_annonceur_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(52, Short.MAX_VALUE))
+        );
+        jPanel87Layout.setVerticalGroup(
+            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel87Layout.createSequentialGroup()
+                .addComponent(jLabel107)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_annonceur_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 15, Short.MAX_VALUE))
+        );
+
+        jPanel84.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel84.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel95.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel95.setText("Résultat");
+
+        jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel103.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel103.setText("Identifiant :");
+
+        jTextField_rechercher_resultat_id.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel104.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel104.setText("Nom :");
+
+        jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel105.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel105.setText("Id information:");
+
+        jTextField_rechercher_resultat_nom.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_id_info.setForeground(new java.awt.Color(51, 51, 51));
+
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel106.setText("Email :");
+
+        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel109.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel109.setText("Téléphone fixe :");
+
+        jLabel110.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel110.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel110.setText("Téléphone portable :");
+
+        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel111.setText("Rue :");
+
+        jLabel114.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel114.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel114.setText("Ville :");
+
+        jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel115.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel115.setText("Code postal :");
+
+        jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel116.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel116.setText("Pays :");
+
+        jTextField_rechercher_resultat_email.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_telfixe.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_telport.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_rue.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_ville.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_cp.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_pays.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
+        jPanel84.setLayout(jPanel84Layout);
+        jPanel84Layout.setHorizontalGroup(
+            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel84Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel84Layout.createSequentialGroup()
+                        .addComponent(jLabel95)
+                        .addContainerGap())
+                    .addGroup(jPanel84Layout.createSequentialGroup()
+                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel110)
+                            .addComponent(jLabel111)
+                            .addComponent(jLabel114)
+                            .addComponent(jLabel115)
+                            .addComponent(jLabel116)
+                            .addComponent(jLabel109)
+                            .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel105)
+                            .addComponent(jLabel104)
+                            .addComponent(jLabel103))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel84Layout.createSequentialGroup()
+                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(22, Short.MAX_VALUE))
+                            .addGroup(jPanel84Layout.createSequentialGroup()
+                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))))
+        );
+        jPanel84Layout.setVerticalGroup(
+            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel84Layout.createSequentialGroup()
+                .addComponent(jLabel95)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel_annonceur_rechercherLayout = new javax.swing.GroupLayout(jPanel_annonceur_rechercher);
+        jPanel_annonceur_rechercher.setLayout(jPanel_annonceur_rechercherLayout);
+        jPanel_annonceur_rechercherLayout.setHorizontalGroup(
+            jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_annonceur_rechercherLayout.createSequentialGroup()
+                .addGroup(jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
+                        .addGap(117, 117, 117)
+                        .addComponent(jButton_rechercher_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel_annonceur_rechercherLayout.setVerticalGroup(
+            jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
+                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(77, 77, 77)
+                        .addComponent(jButton_rechercher_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(51, Short.MAX_VALUE))
+        );
+
+        jTabbedPane_annonceur.addTab("Rechercher", jPanel_annonceur_rechercher);
+
+        jPanel_annonceur_supprimer.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_annonceur_supprimer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
+        jPanel_annonceur_supprimer.setForeground(new java.awt.Color(153, 153, 153));
+
+        jPanel86.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel86.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel112.setText("Annonceur");
+
+        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel113.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel113.setText("Id de l'annonceur :");
+
+        jTextField_supprimer_annonceur.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
+        jPanel86.setLayout(jPanel86Layout);
+        jPanel86Layout.setHorizontalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel112)
+                    .addGroup(jPanel86Layout.createSequentialGroup()
+                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jTextField_supprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        jPanel86Layout.setVerticalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addComponent(jLabel112)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_supprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 47, Short.MAX_VALUE))
+        );
+
+        jButton_spprimer_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_spprimer_annonceur.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_spprimer_annonceur.setText("Supprimer");
+        jButton_spprimer_annonceur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_spprimer_annonceurActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel_annonceur_supprimerLayout = new javax.swing.GroupLayout(jPanel_annonceur_supprimer);
+        jPanel_annonceur_supprimer.setLayout(jPanel_annonceur_supprimerLayout);
+        jPanel_annonceur_supprimerLayout.setHorizontalGroup(
+            jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
+                .addGroup(jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
+                        .addGap(268, 268, 268)
+                        .addComponent(jButton_spprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(165, Short.MAX_VALUE))
+        );
+        jPanel_annonceur_supprimerLayout.setVerticalGroup(
+            jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
+                .addContainerGap(150, Short.MAX_VALUE)
+                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton_spprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73))
+        );
+
+        jTabbedPane_annonceur.addTab("Supprimer", jPanel_annonceur_supprimer);
+
+        jPanel_annonceur_ajouter.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_annonceur_ajouter.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel_annonceur_ajouter.setForeground(new java.awt.Color(153, 153, 153));
+        jPanel_annonceur_ajouter.setPreferredSize(new java.awt.Dimension(695, 375));
+        jPanel_annonceur_ajouter.setRequestFocusEnabled(false);
 
         jPanel_ajouter_information.setBackground(new java.awt.Color(153, 153, 153));
         jPanel_ajouter_information.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel_ajouter_information.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("Information");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setText("adresse mail");
 
+        jTextField_ajouter_telfixe.setForeground(new java.awt.Color(51, 51, 51));
         jTextField_ajouter_telfixe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_ajouter_telfixeActionPerformed(evt);
             }
         });
 
+        jTextField_ajouter_rue.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_mail.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_telport.setForeground(new java.awt.Color(51, 51, 51));
         jTextField_ajouter_telport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField_ajouter_telportActionPerformed(evt);
@@ -178,22 +608,34 @@ public class AnnonceurForm extends javax.swing.JPanel {
         });
 
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("portable");
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setText("téléphone fixe");
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setText("nom de rue");
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
         jLabel19.setText("ville");
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("code postal");
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("pays");
+
+        jTextField_ajouter_ville.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_cp.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_pays.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel_ajouter_informationLayout = new javax.swing.GroupLayout(jPanel_ajouter_information);
         jPanel_ajouter_information.setLayout(jPanel_ajouter_informationLayout);
@@ -271,10 +713,14 @@ public class AnnonceurForm extends javax.swing.JPanel {
         jPanel_ajouter_annonceur.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel22.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setText("Annonceur");
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(51, 51, 51));
         jLabel23.setText("nom annonceur");
+
+        jTextFiel_ajouter_nom.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel_ajouter_annonceurLayout = new javax.swing.GroupLayout(jPanel_ajouter_annonceur);
         jPanel_ajouter_annonceur.setLayout(jPanel_ajouter_annonceurLayout);
@@ -302,6 +748,7 @@ public class AnnonceurForm extends javax.swing.JPanel {
         );
 
         jButton_ajouter_anonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_anonceur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_anonceur.setText("Ajouter");
         jButton_ajouter_anonceur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,14 +763,14 @@ public class AnnonceurForm extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_annonceur_ajouterLayout.createSequentialGroup()
                 .addGroup(jPanel_annonceur_ajouterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel_annonceur_ajouterLayout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jButton_ajouter_anonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(jPanel_ajouter_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel_annonceur_ajouterLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(jPanel_ajouter_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addGap(78, 78, 78)
+                        .addComponent(jButton_ajouter_anonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addComponent(jPanel_ajouter_information, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
+                .addGap(38, 38, 38))
         );
         jPanel_annonceur_ajouterLayout.setVerticalGroup(
             jPanel_annonceur_ajouterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -335,99 +782,13 @@ public class AnnonceurForm extends javax.swing.JPanel {
                         .addGap(51, 51, 51)
                         .addComponent(jButton_ajouter_anonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel_ajouter_information, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
 
         jTabbedPane_annonceur.addTab("Ajouter", jPanel_annonceur_ajouter);
 
-        jPanel_annonceur_modifier.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel_annonceur_modifier.setForeground(new java.awt.Color(153, 153, 153));
-
-        jPanel80.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel80.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel80.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel52.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel52.setText("Annonceur");
-
-        jLabel53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel53.setText("nom :");
-
-        jLabel54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel54.setText("Identifiant :");
-
-        javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
-        jPanel80.setLayout(jPanel80Layout);
-        jPanel80Layout.setHorizontalGroup(
-            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel80Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel52)
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_modfier_identifiant, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        jPanel80Layout.setVerticalGroup(
-            jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel80Layout.createSequentialGroup()
-                .addComponent(jLabel52)
-                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField_modifier_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField_modfier_identifiant, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 43, Short.MAX_VALUE))))
-        );
-
-        jButton_modifier_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_modifier_annonceur.setText("Modifier");
-        jButton_modifier_annonceur.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_modifier_annonceurActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_annonceur_modifierLayout = new javax.swing.GroupLayout(jPanel_annonceur_modifier);
-        jPanel_annonceur_modifier.setLayout(jPanel_annonceur_modifierLayout);
-        jPanel_annonceur_modifierLayout.setHorizontalGroup(
-            jPanel_annonceur_modifierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
-                .addGroup(jPanel_annonceur_modifierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
-                        .addGap(254, 254, 254)
-                        .addComponent(jButton_modifier_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
-        jPanel_annonceur_modifierLayout.setVerticalGroup(
-            jPanel_annonceur_modifierLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_annonceur_modifierLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
-                .addComponent(jButton_modifier_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
-
-        jTabbedPane_annonceur.addTab("Modifier", jPanel_annonceur_modifier);
-
-        jPanel_annonceur_lister.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel_annonceur_lister.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_annonceur_lister.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel_annonceur_lister.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel82.setBackground(new java.awt.Color(153, 153, 153));
@@ -435,8 +796,10 @@ public class AnnonceurForm extends javax.swing.JPanel {
         jPanel82.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel85.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(51, 51, 51));
         jLabel85.setText("Annonceur");
 
+        jTable_annonceur.setForeground(new java.awt.Color(51, 51, 51));
         jTable_annonceur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -472,9 +835,11 @@ public class AnnonceurForm extends javax.swing.JPanel {
             .addGroup(jPanel82Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel85)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                    .addGroup(jPanel82Layout.createSequentialGroup()
+                        .addComponent(jLabel85)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel82Layout.setVerticalGroup(
             jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -486,6 +851,7 @@ public class AnnonceurForm extends javax.swing.JPanel {
         );
 
         jButton_lister_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_lister_annonceur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_lister_annonceur.setText("Lister");
         jButton_lister_annonceur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -498,310 +864,28 @@ public class AnnonceurForm extends javax.swing.JPanel {
         jPanel_annonceur_listerLayout.setHorizontalGroup(
             jPanel_annonceur_listerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_annonceur_listerLayout.createSequentialGroup()
-                .addGroup(jPanel_annonceur_listerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_annonceur_listerLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_annonceur_listerLayout.createSequentialGroup()
-                        .addGap(267, 267, 267)
-                        .addComponent(jButton_lister_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(267, 267, 267)
+                .addComponent(jButton_lister_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel_annonceur_listerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel_annonceur_listerLayout.setVerticalGroup(
             jPanel_annonceur_listerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_annonceur_listerLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jPanel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton_lister_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addGap(26, 26, 26))
         );
 
         jTabbedPane_annonceur.addTab("Lister", jPanel_annonceur_lister);
 
-        jPanel_annonceur_rechercher.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel_annonceur_rechercher.setForeground(new java.awt.Color(153, 153, 153));
-
-        jButton_rechercher_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_rechercher_annonceur.setText("Rechercher");
-        jButton_rechercher_annonceur.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_rechercher_annonceurActionPerformed(evt);
-            }
-        });
-
-        jPanel87.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel87.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel87.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel107.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel107.setText("Annonceur");
-
-        jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel108.setText("Recherche par nom :");
-
-        javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
-        jPanel87.setLayout(jPanel87Layout);
-        jPanel87Layout.setHorizontalGroup(
-            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel87Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel107)
-                    .addGroup(jPanel87Layout.createSequentialGroup()
-                        .addComponent(jLabel108)
-                        .addGap(26, 26, 26)
-                        .addComponent(jTextField_rechercher_annonceur_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(52, Short.MAX_VALUE))
-        );
-        jPanel87Layout.setVerticalGroup(
-            jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel87Layout.createSequentialGroup()
-                .addComponent(jLabel107)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_annonceur_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 15, Short.MAX_VALUE))
-        );
-
-        jPanel84.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel84.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel84.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel95.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel95.setText("Résultat");
-
-        jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel103.setText("Identifiant :");
-
-        jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel104.setText("Nom :");
-
-        jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel105.setText("Identifiant information:");
-
-        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel106.setText("Email :");
-
-        jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel109.setText("Téléphone fixe :");
-
-        jLabel110.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel110.setText("Téléphone portable :");
-
-        jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel111.setText("Rue :");
-
-        jLabel114.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel114.setText("Ville :");
-
-        jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel115.setText("Code postal :");
-
-        jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel116.setText("Pays :");
-
-        javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
-        jPanel84.setLayout(jPanel84Layout);
-        jPanel84Layout.setHorizontalGroup(
-            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel84Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel84Layout.createSequentialGroup()
-                        .addComponent(jLabel95)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel84Layout.createSequentialGroup()
-                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addComponent(jLabel104)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addComponent(jLabel103)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(24, 24, 24))
-                    .addGroup(jPanel84Layout.createSequentialGroup()
-                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel105)
-                                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel109))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel110)
-                                    .addComponent(jLabel111)
-                                    .addComponent(jLabel114)
-                                    .addComponent(jLabel115)
-                                    .addComponent(jLabel116))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 22, Short.MAX_VALUE))))
-        );
-        jPanel84Layout.setVerticalGroup(
-            jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel84Layout.createSequentialGroup()
-                .addComponent(jLabel95)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel109, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel110, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel111, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel_annonceur_rechercherLayout = new javax.swing.GroupLayout(jPanel_annonceur_rechercher);
-        jPanel_annonceur_rechercher.setLayout(jPanel_annonceur_rechercherLayout);
-        jPanel_annonceur_rechercherLayout.setHorizontalGroup(
-            jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_annonceur_rechercherLayout.createSequentialGroup()
-                .addGroup(jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
-                        .addGap(117, 117, 117)
-                        .addComponent(jButton_rechercher_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel_annonceur_rechercherLayout.setVerticalGroup(
-            jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel_annonceur_rechercherLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_annonceur_rechercherLayout.createSequentialGroup()
-                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(77, 77, 77)
-                        .addComponent(jButton_rechercher_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        jTabbedPane_annonceur.addTab("Rechercher", jPanel_annonceur_rechercher);
-
-        jPanel_annonceur_supprimer.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel_annonceur_supprimer.setForeground(new java.awt.Color(153, 153, 153));
-
-        jPanel86.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel86.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel112.setText("Annonceur");
-
-        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel113.setText("Id de l'annonceur :");
-
-        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
-        jPanel86.setLayout(jPanel86Layout);
-        jPanel86Layout.setHorizontalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel112)
-                    .addGroup(jPanel86Layout.createSequentialGroup()
-                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jTextField_supprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(84, Short.MAX_VALUE))
-        );
-        jPanel86Layout.setVerticalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addComponent(jLabel112)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_supprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 47, Short.MAX_VALUE))
-        );
-
-        jButton_spprimer_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_spprimer_annonceur.setText("Supprimer");
-        jButton_spprimer_annonceur.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_spprimer_annonceurActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel_annonceur_supprimerLayout = new javax.swing.GroupLayout(jPanel_annonceur_supprimer);
-        jPanel_annonceur_supprimer.setLayout(jPanel_annonceur_supprimerLayout);
-        jPanel_annonceur_supprimerLayout.setHorizontalGroup(
-            jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
-                .addGroup(jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
-                        .addGap(268, 268, 268)
-                        .addComponent(jButton_spprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
-        jPanel_annonceur_supprimerLayout.setVerticalGroup(
-            jPanel_annonceur_supprimerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_annonceur_supprimerLayout.createSequentialGroup()
-                .addContainerGap(119, Short.MAX_VALUE)
-                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton_spprimer_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
-        );
-
-        jTabbedPane_annonceur.addTab("Supprimer", jPanel_annonceur_supprimer);
-
         jButton_retour_annonceur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_retour_annonceur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_retour_annonceur.setText("Retour");
         jButton_retour_annonceur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -815,33 +899,32 @@ public class AnnonceurForm extends javax.swing.JPanel {
             jPanel_annonceurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_annonceurLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel_annonceurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_annonceurLayout.createSequentialGroup()
-                        .addComponent(jButton_retour_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(265, 265, 265))))
+                .addComponent(jTabbedPane_annonceur)
+                .addContainerGap())
+            .addGroup(jPanel_annonceurLayout.createSequentialGroup()
+                .addGap(280, 280, 280)
+                .addComponent(jButton_retour_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel_annonceurLayout.setVerticalGroup(
             jPanel_annonceurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_annonceurLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane_annonceur, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane_annonceur)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton_retour_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel_annonceur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_annonceur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_annonceur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

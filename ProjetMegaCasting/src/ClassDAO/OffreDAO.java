@@ -41,12 +41,6 @@ public class OffreDAO {
         
         try {
             stmt = cnx.createStatement();
-            
-            if (off.getDiffuseur() == null && off.getMedia()!= null ){
-               
-               
-            }
-            
             stmt.executeUpdate("INSERT INTO offre (int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, id_annonceur, id_contrat, id_metier, id_domaine, id_diffuseur) "
                     + "VALUES ('" + off.getInt_offre()
                     + ", '" + off.getRef_offre() 
@@ -172,7 +166,7 @@ public class OffreDAO {
                 Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
                 Media med = MediaDAO.TrouverMediaId(cnx, id_media);
                 
-                Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom);
+                Offre off = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif, med);
                 
                 
                 liste.add(off);
@@ -221,7 +215,7 @@ public class OffreDAO {
                 Diffuseur dif = DiffuseurDAO.TrouverDiffuseurId(cnx, id_diffuseur);
                 Media med = MediaDAO.TrouverMediaId(cnx, id_media);
                 
-                offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom );              
+                offre = new Offre(int_offre, ref_offre, date_offre, duree_offre, date_deb_offre, loc_offre, desc_poste_offre, desc_profil_offre, ann, con, met, dom, dif, med);              
                 offre.setId_offre((int) id_offre);
             }
         } catch (Exception ex) {

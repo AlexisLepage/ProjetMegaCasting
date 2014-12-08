@@ -101,6 +101,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jTextField_ajouter_nom = new javax.swing.JTextField();
         jButton_ajouter_diffuseur = new javax.swing.JButton();
+        statut_dif = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jPanel80 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
@@ -115,6 +116,12 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_diffuseur = new javax.swing.JTable();
         jButton_lister_diffuseur = new javax.swing.JButton();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel86 = new javax.swing.JPanel();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jTextField_supprimer_diffuseur = new javax.swing.JTextField();
+        jButton_supprimer_diffuseur = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jButton_rechercher_diffuseur = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
@@ -143,15 +150,18 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jTextField_rechercher_resultat_ville = new javax.swing.JTextField();
         jTextField_rechercher_resultat_cp = new javax.swing.JTextField();
         jTextField_rechercher_resultat_pays = new javax.swing.JTextField();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel86 = new javax.swing.JPanel();
-        jLabel112 = new javax.swing.JLabel();
-        jLabel113 = new javax.swing.JLabel();
-        jTextField_supprimer_diffuseur = new javax.swing.JTextField();
-        jButton_supprimer_diffuseur = new javax.swing.JButton();
         jButton_retour_diffuseur = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        setBackground(new java.awt.Color(51, 51, 51));
+
+        jPanel_diffuseur.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_diffuseur.setPreferredSize(new java.awt.Dimension(720, 500));
+
+        jTabbedPane22.setBackground(new java.awt.Color(51, 51, 51));
+        jTabbedPane22.setPreferredSize(new java.awt.Dimension(720, 500));
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel3.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel49.setBackground(new java.awt.Color(153, 153, 153));
@@ -159,28 +169,50 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel49.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel14.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("Information");
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setText("adresse mail");
 
+        jTextField_ajouter_telfixe.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_rue.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_mail.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_telport.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("portable");
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setText("téléphone fixe");
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
         jLabel18.setText("nom de rue");
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
         jLabel19.setText("ville");
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("code postal");
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("pays");
+
+        jTextField_ajouter_ville.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_cp.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_ajouter_pays.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
         jPanel49.setLayout(jPanel49Layout);
@@ -258,10 +290,14 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel50.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel22.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setText("Diffuseur");
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(51, 51, 51));
         jLabel23.setText("nom diffuseur");
+
+        jTextField_ajouter_nom.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
         jPanel50.setLayout(jPanel50Layout);
@@ -289,12 +325,15 @@ public class DiffuseurForm extends javax.swing.JPanel {
         );
 
         jButton_ajouter_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_diffuseur.setText("Ajouter");
         jButton_ajouter_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_ajouter_diffuseurActionPerformed(evt);
             }
         });
+
+        statut_dif.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -303,12 +342,15 @@ public class DiffuseurForm extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(83, 83, 83)
+                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
                         .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                        .addGap(54, 54, 54)
+                        .addComponent(statut_dif, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(49, 49, 49))
         );
@@ -320,14 +362,17 @@ public class DiffuseurForm extends javax.swing.JPanel {
                     .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                        .addGap(68, 68, 68)
+                        .addComponent(jButton_ajouter_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(statut_dif)))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jTabbedPane22.addTab("Ajouter", jPanel3);
 
-        jPanel15.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel15.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel15.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel80.setBackground(new java.awt.Color(153, 153, 153));
@@ -335,13 +380,20 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel80.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel52.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 51));
         jLabel52.setText("Diffuseur");
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 51));
         jLabel53.setText("Identifiant :");
 
+        jTextField_modifier_id.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(51, 51, 51));
         jLabel54.setText("Nom :");
+
+        jTextField_modifier_nom.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
         jPanel80.setLayout(jPanel80Layout);
@@ -377,6 +429,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
         );
 
         jButton_modifier_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_modifier_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_modifier_diffuseur.setText("Modifier");
         jButton_modifier_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -389,28 +442,28 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(246, 246, 246)
-                        .addComponent(jButton_modifier_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(221, Short.MAX_VALUE))
+                .addGap(207, 207, 207)
+                .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(209, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton_modifier_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(257, 257, 257))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addComponent(jButton_modifier_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addGap(74, 74, 74))
         );
 
         jTabbedPane22.addTab("Modifier", jPanel15);
 
-        jPanel16.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel16.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel16.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel82.setBackground(new java.awt.Color(153, 153, 153));
@@ -418,8 +471,10 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel82.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel85.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(51, 51, 51));
         jLabel85.setText("Diffuseur");
 
+        jTable_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jTable_diffuseur.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},
@@ -455,9 +510,11 @@ public class DiffuseurForm extends javax.swing.JPanel {
             .addGroup(jPanel82Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel85)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 658, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                    .addGroup(jPanel82Layout.createSequentialGroup()
+                        .addComponent(jLabel85)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 644, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel82Layout.setVerticalGroup(
             jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,6 +526,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
         );
 
         jButton_lister_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_lister_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_lister_diffuseur.setText("Lister");
         jButton_lister_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -481,13 +539,12 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(jButton_lister_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(jPanel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(262, 262, 262)
+                .addComponent(jButton_lister_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
@@ -502,10 +559,90 @@ public class DiffuseurForm extends javax.swing.JPanel {
 
         jTabbedPane22.addTab("Lister", jPanel16);
 
-        jPanel17.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel18.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
+        jPanel18.setForeground(new java.awt.Color(153, 153, 153));
+
+        jPanel86.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel86.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel112.setText("Diffuseur");
+
+        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel113.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel113.setText("Id du diffuseur :");
+
+        jTextField_supprimer_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
+        jPanel86.setLayout(jPanel86Layout);
+        jPanel86Layout.setHorizontalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel112)
+                    .addGroup(jPanel86Layout.createSequentialGroup()
+                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        jPanel86Layout.setVerticalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addComponent(jLabel112)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 47, Short.MAX_VALUE))
+        );
+
+        jButton_supprimer_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_supprimer_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_supprimer_diffuseur.setText("Supprimer");
+        jButton_supprimer_diffuseur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_supprimer_diffuseurActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(262, 262, 262)
+                        .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(160, Short.MAX_VALUE))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap(126, Short.MAX_VALUE)
+                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57))
+        );
+
+        jTabbedPane22.addTab("Supprimer", jPanel18);
+
+        jPanel17.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel17.setForeground(new java.awt.Color(153, 153, 153));
 
         jButton_rechercher_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_rechercher_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_rechercher_diffuseur.setText("Rechercher");
         jButton_rechercher_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -518,10 +655,14 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel87.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel107.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel107.setForeground(new java.awt.Color(51, 51, 51));
         jLabel107.setText("Diffuseur");
 
         jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel108.setForeground(new java.awt.Color(51, 51, 51));
         jLabel108.setText("Recherche par nom :");
+
+        jTextField_rechercher_nom.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
         jPanel87.setLayout(jPanel87Layout);
@@ -553,37 +694,68 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel84.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel95.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(51, 51, 51));
         jLabel95.setText("Résultat");
 
         jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel103.setForeground(new java.awt.Color(51, 51, 51));
         jLabel103.setText("Identifiant :");
 
+        jTextField_rechercher_resultat_id.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel104.setForeground(new java.awt.Color(51, 51, 51));
         jLabel104.setText("Nom :");
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel105.setText("Identifiant information:");
+        jLabel105.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel105.setText("Id information:");
+
+        jTextField_rechercher_resultat_nom.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_id_info.setForeground(new java.awt.Color(51, 51, 51));
 
         jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setForeground(new java.awt.Color(51, 51, 51));
         jLabel106.setText("Email :");
 
         jLabel109.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel109.setForeground(new java.awt.Color(51, 51, 51));
         jLabel109.setText("Téléphone fixe :");
 
         jLabel110.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel110.setForeground(new java.awt.Color(51, 51, 51));
         jLabel110.setText("Téléphone portable :");
 
         jLabel111.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel111.setForeground(new java.awt.Color(51, 51, 51));
         jLabel111.setText("Rue :");
 
         jLabel114.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel114.setForeground(new java.awt.Color(51, 51, 51));
         jLabel114.setText("Ville :");
 
         jLabel115.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel115.setForeground(new java.awt.Color(51, 51, 51));
         jLabel115.setText("Code postal :");
 
         jLabel116.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel116.setForeground(new java.awt.Color(51, 51, 51));
         jLabel116.setText("Pays :");
+
+        jTextField_rechercher_resultat_email.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_telfixe.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_telport.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_rue.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_ville.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_cp.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField_rechercher_resultat_pays.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
         jPanel84.setLayout(jPanel84Layout);
@@ -594,54 +766,45 @@ public class DiffuseurForm extends javax.swing.JPanel {
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel84Layout.createSequentialGroup()
                         .addComponent(jLabel95)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel84Layout.createSequentialGroup()
-                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addComponent(jLabel104)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addComponent(jLabel103)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(24, 24, 24))
+                        .addContainerGap())
                     .addGroup(jPanel84Layout.createSequentialGroup()
                         .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel110)
+                            .addComponent(jLabel111)
+                            .addComponent(jLabel114)
+                            .addComponent(jLabel115)
+                            .addComponent(jLabel116)
+                            .addComponent(jLabel105)
+                            .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel109)
+                            .addComponent(jLabel104)
+                            .addComponent(jLabel103))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel84Layout.createSequentialGroup()
+                                .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(22, Short.MAX_VALUE))
                             .addGroup(jPanel84Layout.createSequentialGroup()
                                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel105)
-                                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel109))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField_rechercher_resultat_telfixe, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel84Layout.createSequentialGroup()
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel110)
-                                    .addComponent(jLabel111)
-                                    .addComponent(jLabel114)
-                                    .addComponent(jLabel115)
-                                    .addComponent(jLabel116))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField_rechercher_resultat_pays, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField_rechercher_resultat_cp, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField_rechercher_resultat_ville, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextField_rechercher_resultat_rue, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 22, Short.MAX_VALUE))))
+                                    .addComponent(jTextField_rechercher_resultat_telport, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_email, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextField_rechercher_resultat_id_info, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))))
         );
         jPanel84Layout.setVerticalGroup(
             jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel84Layout.createSequentialGroup()
                 .addComponent(jLabel95)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField_rechercher_resultat_nom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -691,9 +854,9 @@ public class DiffuseurForm extends javax.swing.JPanel {
                         .addContainerGap()
                         .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
+                        .addGap(106, 106, 106)
                         .addComponent(jButton_rechercher_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -701,91 +864,20 @@ public class DiffuseurForm extends javax.swing.JPanel {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_rechercher_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(113, 113, 113))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(108, 108, 108)
+                        .addComponent(jButton_rechercher_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 135, Short.MAX_VALUE))
+                    .addComponent(jPanel84, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         jTabbedPane22.addTab("Rechercher", jPanel17);
 
-        jPanel18.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel18.setForeground(new java.awt.Color(153, 153, 153));
-
-        jPanel86.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel86.setForeground(new java.awt.Color(255, 255, 255));
-
-        jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel112.setText("Diffuseur");
-
-        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel113.setText("Id du diffuseur :");
-
-        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
-        jPanel86.setLayout(jPanel86Layout);
-        jPanel86Layout.setHorizontalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel112)
-                    .addGroup(jPanel86Layout.createSequentialGroup()
-                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(84, Short.MAX_VALUE))
-        );
-        jPanel86Layout.setVerticalGroup(
-            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel86Layout.createSequentialGroup()
-                .addComponent(jLabel112)
-                .addGap(27, 27, 27)
-                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 47, Short.MAX_VALUE))
-        );
-
-        jButton_supprimer_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_supprimer_diffuseur.setText("Supprimer");
-        jButton_supprimer_diffuseur.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_supprimer_diffuseurActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(157, 157, 157)
-                        .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel18Layout.createSequentialGroup()
-                        .addGap(247, 247, 247)
-                        .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(162, Short.MAX_VALUE))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
-                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addComponent(jButton_supprimer_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
-        );
-
-        jTabbedPane22.addTab("Supprimer", jPanel18);
-
         jButton_retour_diffuseur.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_retour_diffuseur.setForeground(new java.awt.Color(51, 51, 51));
         jButton_retour_diffuseur.setText("Retour");
         jButton_retour_diffuseur.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -798,33 +890,34 @@ public class DiffuseurForm extends javax.swing.JPanel {
         jPanel_diffuseurLayout.setHorizontalGroup(
             jPanel_diffuseurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(jButton_retour_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel_diffuseurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 695, Short.MAX_VALUE))
+                    .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
+                        .addGap(280, 280, 280)
+                        .addComponent(jButton_retour_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         jPanel_diffuseurLayout.setVerticalGroup(
             jPanel_diffuseurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_diffuseurLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton_retour_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel_diffuseur, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel_diffuseur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_diffuseur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_diffuseur, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -864,7 +957,7 @@ public class DiffuseurForm extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton_ajouter_diffuseurActionPerformed
 
     private void jButton_modifier_diffuseurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_modifier_diffuseurActionPerformed
-        String driver = "com.mysql.jdbc.Driver";
+       String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost/megacasting";
         String utilisateur = "root";
         String password = "";          
@@ -1135,5 +1228,6 @@ public class DiffuseurForm extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField_rechercher_resultat_telport;
     private javax.swing.JTextField jTextField_rechercher_resultat_ville;
     private javax.swing.JTextField jTextField_supprimer_diffuseur;
+    public static javax.swing.JLabel statut_dif;
     // End of variables declaration//GEN-END:variables
 }

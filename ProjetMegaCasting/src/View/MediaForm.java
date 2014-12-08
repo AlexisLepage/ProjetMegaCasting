@@ -4,16 +4,7 @@
  */
 package View;
 
-import Class.Media;
-import Class.Metier;
-import ClassDAO.MediaDAO;
-import ClassDAO.MetierDAO;
 import java.awt.CardLayout;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Collection;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -82,33 +73,45 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel80 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
         jLabel53 = new javax.swing.JLabel();
-        jTextField_modifier_url = new javax.swing.JTextField();
+        jTextField41 = new javax.swing.JTextField();
         jLabel54 = new javax.swing.JLabel();
-        jTextField_modifier_id = new javax.swing.JTextField();
-        jButton_modifier_media = new javax.swing.JButton();
+        jTextField42 = new javax.swing.JTextField();
+        jButton_ajouter_ajouter_anonceur6 = new javax.swing.JButton();
         jPanel16 = new javax.swing.JPanel();
         jPanel82 = new javax.swing.JPanel();
         jLabel85 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_lister_media = new javax.swing.JTable();
-        jButton_lister_media = new javax.swing.JButton();
+        jTable1 = new javax.swing.JTable();
+        jButton_ajouter_ajouter_anonceur7 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
-        jButton_rechercher_media = new javax.swing.JButton();
+        jButton_ajouter_ajouter_anonceur8 = new javax.swing.JButton();
         jPanel87 = new javax.swing.JPanel();
         jLabel107 = new javax.swing.JLabel();
         jLabel108 = new javax.swing.JLabel();
-        jTextField_rechercher_url = new javax.swing.JTextField();
+        jTextField78 = new javax.swing.JTextField();
         jPanel84 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
-        jTextField_rechercher_resultat_id = new javax.swing.JTextField();
+        jTextField74 = new javax.swing.JTextField();
         jLabel104 = new javax.swing.JLabel();
         jLabel105 = new javax.swing.JLabel();
-        jTextField_rechercher_resultat_url = new javax.swing.JTextField();
-        jTextField_rechercher_resultat_poids = new javax.swing.JTextField();
+        jLabel106 = new javax.swing.JLabel();
+        jTextField75 = new javax.swing.JTextField();
+        jTextField76 = new javax.swing.JTextField();
+        jTextField77 = new javax.swing.JTextField();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel86 = new javax.swing.JPanel();
+        jLabel112 = new javax.swing.JLabel();
+        jLabel113 = new javax.swing.JLabel();
+        jTextField95 = new javax.swing.JTextField();
+        jButton_ajouter_ajouter_anonceur9 = new javax.swing.JButton();
         jButton_retour_ajouter_annonceur4 = new javax.swing.JButton();
 
-        jPanel15.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel_media.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_media.setPreferredSize(new java.awt.Dimension(720, 500));
+
+        jPanel15.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel15.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel80.setBackground(new java.awt.Color(153, 153, 153));
@@ -116,13 +119,20 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel80.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel52.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 51));
         jLabel52.setText("Media");
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 51));
         jLabel53.setText("url :");
 
+        jTextField41.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(51, 51, 51));
         jLabel54.setText("Identifiant :");
+
+        jTextField42.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel80Layout = new javax.swing.GroupLayout(jPanel80);
         jPanel80.setLayout(jPanel80Layout);
@@ -133,13 +143,13 @@ public class MediaForm extends javax.swing.JPanel {
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel52)
                     .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addComponent(jLabel54)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel80Layout.createSequentialGroup()
                         .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField_modifier_url, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel80Layout.createSequentialGroup()
+                        .addComponent(jLabel54)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel80Layout.setVerticalGroup(
@@ -149,23 +159,20 @@ public class MediaForm extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_modifier_id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel80Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(jTextField_modifier_url)))
-                .addContainerGap())
+                .addGroup(jPanel80Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 14, Short.MAX_VALUE))
         );
 
-        jButton_modifier_media.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_modifier_media.setText("Modifier");
-        jButton_modifier_media.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ajouter_ajouter_anonceur6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur6.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_ajouter_ajouter_anonceur6.setText("Modifier");
+        jButton_ajouter_ajouter_anonceur6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_modifier_mediaActionPerformed(evt);
+                jButton_ajouter_ajouter_anonceur6ActionPerformed(evt);
             }
         });
 
@@ -176,26 +183,27 @@ public class MediaForm extends javax.swing.JPanel {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(197, 197, 197)
-                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(262, 262, 262)
+                        .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(245, 245, 245)
-                        .addComponent(jButton_modifier_media, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(231, Short.MAX_VALUE))
+                        .addGap(207, 207, 207)
+                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
+                .addGap(42, 42, 42)
                 .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                .addComponent(jButton_modifier_media, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addComponent(jButton_ajouter_ajouter_anonceur6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
         );
 
         jTabbedPane22.addTab("Modifier", jPanel15);
 
-        jPanel16.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel16.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel16.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel82.setBackground(new java.awt.Color(153, 153, 153));
@@ -203,24 +211,26 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel82.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel85.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel85.setForeground(new java.awt.Color(51, 51, 51));
         jLabel85.setText("Media");
 
-        jTable_lister_media.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setForeground(new java.awt.Color(51, 51, 51));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Identifiant", "Url", "Poids"
+                "Identifiant", "Url", "Poids", "Identifiant Type_media"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -231,7 +241,7 @@ public class MediaForm extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable_lister_media);
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel82Layout = new javax.swing.GroupLayout(jPanel82);
         jPanel82.setLayout(jPanel82Layout);
@@ -240,9 +250,11 @@ public class MediaForm extends javax.swing.JPanel {
             .addGroup(jPanel82Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel85)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                    .addGroup(jPanel82Layout.createSequentialGroup()
+                        .addComponent(jLabel85)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel82Layout.setVerticalGroup(
             jPanel82Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,11 +265,12 @@ public class MediaForm extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jButton_lister_media.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_lister_media.setText("Lister");
-        jButton_lister_media.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ajouter_ajouter_anonceur7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur7.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_ajouter_ajouter_anonceur7.setText("Lister");
+        jButton_ajouter_ajouter_anonceur7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_lister_mediaActionPerformed(evt);
+                jButton_ajouter_ajouter_anonceur7ActionPerformed(evt);
             }
         });
 
@@ -266,35 +279,36 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(jButton_lister_media, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(jPanel82, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addGap(262, 262, 262)
+                .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addComponent(jPanel82, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton_lister_media, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38))
         );
 
         jTabbedPane22.addTab("Lister", jPanel16);
 
-        jPanel17.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel17.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel17.setForeground(new java.awt.Color(153, 153, 153));
 
-        jButton_rechercher_media.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton_rechercher_media.setText("Rechercher");
-        jButton_rechercher_media.addActionListener(new java.awt.event.ActionListener() {
+        jButton_ajouter_ajouter_anonceur8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur8.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_ajouter_ajouter_anonceur8.setText("Rechercher");
+        jButton_ajouter_ajouter_anonceur8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_rechercher_mediaActionPerformed(evt);
+                jButton_ajouter_ajouter_anonceur8ActionPerformed(evt);
             }
         });
 
@@ -303,10 +317,14 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel87.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel107.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel107.setForeground(new java.awt.Color(51, 51, 51));
         jLabel107.setText("Media");
 
         jLabel108.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel108.setForeground(new java.awt.Color(51, 51, 51));
         jLabel108.setText("Recherche par url :");
+
+        jTextField78.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel87Layout = new javax.swing.GroupLayout(jPanel87);
         jPanel87.setLayout(jPanel87Layout);
@@ -319,7 +337,7 @@ public class MediaForm extends javax.swing.JPanel {
                     .addGroup(jPanel87Layout.createSequentialGroup()
                         .addComponent(jLabel108)
                         .addGap(26, 26, 26)
-                        .addComponent(jTextField_rechercher_url, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel87Layout.setVerticalGroup(
@@ -329,7 +347,7 @@ public class MediaForm extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel87Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_url, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 15, Short.MAX_VALUE))
         );
 
@@ -338,16 +356,32 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel84.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel95.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel95.setForeground(new java.awt.Color(51, 51, 51));
         jLabel95.setText("Résultat");
 
         jLabel103.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel103.setForeground(new java.awt.Color(51, 51, 51));
         jLabel103.setText("Identifiant :");
 
+        jTextField74.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel104.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel104.setForeground(new java.awt.Color(51, 51, 51));
         jLabel104.setText("Url :");
 
         jLabel105.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel105.setForeground(new java.awt.Color(51, 51, 51));
         jLabel105.setText("Poids");
+
+        jLabel106.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel106.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel106.setText("Type :");
+
+        jTextField75.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField76.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField77.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel84Layout = new javax.swing.GroupLayout(jPanel84);
         jPanel84.setLayout(jPanel84Layout);
@@ -356,15 +390,17 @@ public class MediaForm extends javax.swing.JPanel {
             .addGroup(jPanel84Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel106)
                     .addComponent(jLabel95)
                     .addComponent(jLabel105)
                     .addComponent(jLabel104)
                     .addComponent(jLabel103))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_url, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_poids, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField74, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(52, Short.MAX_VALUE))
         );
         jPanel84Layout.setVerticalGroup(
@@ -373,17 +409,21 @@ public class MediaForm extends javax.swing.JPanel {
                 .addComponent(jLabel95)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_rechercher_resultat_id, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField74, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel104, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_url, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField75, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel105, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField_rechercher_resultat_poids, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 23, Short.MAX_VALUE))
+                    .addComponent(jTextField76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel84Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel106, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField77, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 30, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -393,34 +433,109 @@ public class MediaForm extends javax.swing.JPanel {
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addContainerGap(26, Short.MAX_VALUE)
-                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(45, 45, 45))
+                        .addContainerGap()
+                        .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(jButton_rechercher_media, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(93, 93, 93)
+                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                 .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel84, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel17Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
                         .addComponent(jPanel87, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(33, 33, 33)
-                        .addComponent(jButton_rechercher_media, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addGap(50, 50, 50)
+                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         jTabbedPane22.addTab("Rechercher", jPanel17);
 
+        jPanel18.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
+        jPanel18.setForeground(new java.awt.Color(153, 153, 153));
+
+        jPanel86.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel86.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel86.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel112.setText("Media");
+
+        jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel113.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel113.setText("Identifiant Media :");
+
+        jTextField95.setForeground(new java.awt.Color(51, 51, 51));
+
+        javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
+        jPanel86.setLayout(jPanel86Layout);
+        jPanel86Layout.setHorizontalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel112)
+                    .addGroup(jPanel86Layout.createSequentialGroup()
+                        .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+        jPanel86Layout.setVerticalGroup(
+            jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel86Layout.createSequentialGroup()
+                .addComponent(jLabel112)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel86Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField95, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 47, Short.MAX_VALUE))
+        );
+
+        jButton_ajouter_ajouter_anonceur9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur9.setForeground(new java.awt.Color(51, 51, 51));
+        jButton_ajouter_ajouter_anonceur9.setText("Supprimer");
+        jButton_ajouter_ajouter_anonceur9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ajouter_ajouter_anonceur9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGap(262, 262, 262)
+                .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
+                .addContainerGap(163, Short.MAX_VALUE)
+                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(155, 155, 155))
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap(125, Short.MAX_VALUE)
+                .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62))
+        );
+
+        jTabbedPane22.addTab("Supprimer", jPanel18);
+
         jButton_retour_ajouter_annonceur4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_retour_ajouter_annonceur4.setForeground(new java.awt.Color(51, 51, 51));
         jButton_retour_ajouter_annonceur4.setText("Retour");
         jButton_retour_ajouter_annonceur4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -433,167 +548,72 @@ public class MediaForm extends javax.swing.JPanel {
         jPanel_mediaLayout.setHorizontalGroup(
             jPanel_mediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_mediaLayout.createSequentialGroup()
-                .addGap(256, 256, 256)
-                .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel_mediaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel_mediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel_mediaLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE))
+                    .addGroup(jPanel_mediaLayout.createSequentialGroup()
+                        .addGap(276, 276, 276)
+                        .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel_mediaLayout.setVerticalGroup(
             jPanel_mediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_mediaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                 .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel_media, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel_media, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_media, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel_media, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_modifier_mediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_modifier_mediaActionPerformed
-        String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost/megacasting";
-        String utilisateur = "root";
-        String password = "";          
-       
-       Connection cnx = null;             
-       
-        try {
-            cnx = DriverManager.getConnection(url, utilisateur, password);
-            
-            System.out.println("Connexion réussi !"); 
-            
-            Media media = MediaDAO.TrouverMediaId(cnx, Integer.parseInt(jTextField_modifier_id.getText()));           
-            media.setUrl_media(jTextField_modifier_url.getText());
-            
-            MediaDAO.ModifierMedia(cnx, media);
-            
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }finally{
-            
-            if(cnx != null){
-                try {
-                    cnx.close();
-                } catch (SQLException ex) {
-                }
-            }
-        }
-        
-        System.out.println("Connexion fermé !"); 
-        
-        RetourMenu();
-                                 
-    }//GEN-LAST:event_jButton_modifier_mediaActionPerformed
+    private void jButton_ajouter_ajouter_anonceur6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur6ActionPerformed
 
-    private void jButton_lister_mediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_lister_mediaActionPerformed
-      String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost/megacasting";
-        String utilisateur = "root";
-        String password = "";          
-       
-       Connection cnx = null;             
-       
-        try {
-            cnx = DriverManager.getConnection(url, utilisateur, password);
-            
-            System.out.println("Connexion réussi !"); 
-            
-             
-            DefaultTableModel model = (DefaultTableModel) jTable_lister_media.getModel();
+    private void jButton_ajouter_ajouter_anonceur7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur7ActionPerformed
 
-            MediaDAO mediaDAO = new MediaDAO();
-            Collection<Media> medias = MediaDAO.ListerMedia(cnx);
+    private void jButton_ajouter_ajouter_anonceur8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur8ActionPerformed
 
-
-            for (Media m : medias){
-                model.addRow(new Object[] {
-                   m.getId_media(),
-                   m.getPoi_media(),
-                   m.getUrl_media()
-                });
-
-            }
-            
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }finally{
-            
-            if(cnx != null){
-                try {
-                    cnx.close();
-                } catch (SQLException ex) {
-                }
-            }
-        }
-        
-        System.out.println("Connexion fermé !"); 
-    }//GEN-LAST:event_jButton_lister_mediaActionPerformed
-
-    private void jButton_rechercher_mediaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_rechercher_mediaActionPerformed
-       String driver = "com.mysql.jdbc.Driver";
-        String url = "jdbc:mysql://localhost/megacasting";
-        String utilisateur = "root";
-        String password = "";          
-       
-       Connection cnx = null;             
-       
-        try {
-            cnx = DriverManager.getConnection(url, utilisateur, password);
-            
-            System.out.println("Connexion réussi !"); 
-            
-            Media media = MediaDAO.TrouverMediaUrl(cnx, jTextField_rechercher_url.getText());
-            jTextField_rechercher_resultat_id.setText(Long.toString(media.getId_media()));
-            jTextField_rechercher_resultat_url.setText(media.getUrl_media());
-            jTextField_rechercher_resultat_poids.setText(Integer.toString(media.getPoi_media()));
-           
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }finally{
-            
-            if(cnx != null){
-                try {
-                    cnx.close();
-                } catch (SQLException ex) {
-                }
-            }
-        }
-    }//GEN-LAST:event_jButton_rechercher_mediaActionPerformed
+    private void jButton_ajouter_ajouter_anonceur9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur9ActionPerformed
 
     private void jButton_retour_ajouter_annonceur4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_retour_ajouter_annonceur4ActionPerformed
         CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
         c1.show(MaFenetrePrincipale.Panel_principal, "acceuilCard");
     }//GEN-LAST:event_jButton_retour_ajouter_annonceur4ActionPerformed
 
-    private void RetourMenu(){   
-        CardLayout c1 = (CardLayout) MaFenetrePrincipale.Panel_principal.getLayout();
-        c1.show(MaFenetrePrincipale.Panel_principal, "acceuilCard");
-    }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_lister_media;
-    private javax.swing.JButton jButton_modifier_media;
-    private javax.swing.JButton jButton_rechercher_media;
+    private javax.swing.JButton jButton_ajouter_ajouter_anonceur6;
+    private javax.swing.JButton jButton_ajouter_ajouter_anonceur7;
+    private javax.swing.JButton jButton_ajouter_ajouter_anonceur8;
+    private javax.swing.JButton jButton_ajouter_ajouter_anonceur9;
     private javax.swing.JButton jButton_retour_ajouter_annonceur4;
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
+    private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
@@ -602,19 +622,23 @@ public class MediaForm extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel80;
     private javax.swing.JPanel jPanel82;
     private javax.swing.JPanel jPanel84;
+    private javax.swing.JPanel jPanel86;
     private javax.swing.JPanel jPanel87;
     protected javax.swing.JPanel jPanel_media;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane22;
-    private javax.swing.JTable jTable_lister_media;
-    private javax.swing.JTextField jTextField_modifier_id;
-    private javax.swing.JTextField jTextField_modifier_url;
-    private javax.swing.JTextField jTextField_rechercher_resultat_id;
-    private javax.swing.JTextField jTextField_rechercher_resultat_poids;
-    private javax.swing.JTextField jTextField_rechercher_resultat_url;
-    private javax.swing.JTextField jTextField_rechercher_url;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField41;
+    private javax.swing.JTextField jTextField42;
+    private javax.swing.JTextField jTextField74;
+    private javax.swing.JTextField jTextField75;
+    private javax.swing.JTextField jTextField76;
+    private javax.swing.JTextField jTextField77;
+    private javax.swing.JTextField jTextField78;
+    private javax.swing.JTextField jTextField95;
     // End of variables declaration//GEN-END:variables
 }

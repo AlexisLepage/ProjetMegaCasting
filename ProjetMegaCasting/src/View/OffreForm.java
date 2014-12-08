@@ -79,8 +79,12 @@ public class OffreForm extends javax.swing.JPanel {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jTextField17 = new javax.swing.JTextField();
+        jTextField18 = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
+        jTextField21 = new javax.swing.JTextField();
         jLabel30 = new javax.swing.JLabel();
         jTextField22 = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
@@ -89,17 +93,12 @@ public class OffreForm extends javax.swing.JPanel {
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
+        jTextField24 = new javax.swing.JTextField();
+        jTextField25 = new javax.swing.JTextField();
         jTextField26 = new javax.swing.JTextField();
+        jTextField27 = new javax.swing.JTextField();
         jTextField28 = new javax.swing.JTextField();
         jButton_ajouter_ajouter_anonceur5 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel1 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
-        jSpinner3 = new javax.swing.JSpinner();
-        jComboBox1 = new javax.swing.JComboBox();
-        jComboBox2 = new javax.swing.JComboBox();
-        jComboBox3 = new javax.swing.JComboBox();
-        jComboBox4 = new javax.swing.JComboBox();
         jPanel15 = new javax.swing.JPanel();
         jPanel51 = new javax.swing.JPanel();
         jLabel24 = new javax.swing.JLabel();
@@ -173,7 +172,13 @@ public class OffreForm extends javax.swing.JPanel {
         jButton_ajouter_ajouter_anonceur9 = new javax.swing.JButton();
         jButton_retour_ajouter_annonceur4 = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel_offre.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel_offre.setPreferredSize(new java.awt.Dimension(720, 500));
+
+        jTabbedPane22.setPreferredSize(new java.awt.Dimension(696, 404));
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel3.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel50.setBackground(new java.awt.Color(153, 153, 153));
@@ -181,84 +186,87 @@ public class OffreForm extends javax.swing.JPanel {
         jPanel50.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel22.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setText("Offre");
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(51, 51, 51));
         jLabel23.setText("Intitulé :");
 
         jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(51, 51, 51));
         jLabel25.setText("référence :");
 
         jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(51, 51, 51));
         jLabel26.setText("durée :");
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(51, 51, 51));
         jLabel27.setText("date début :");
 
+        jTextField17.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField18.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(51, 51, 51));
         jLabel28.setText("date casting :");
 
+        jTextField19.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField20.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(51, 51, 51));
         jLabel29.setText("Localisation :");
 
+        jTextField21.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(51, 51, 51));
         jLabel30.setText("Description de l'offre :");
 
+        jTextField22.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(51, 51, 51));
         jLabel31.setText("Annonceur :");
 
+        jTextField23.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel32.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(51, 51, 51));
         jLabel32.setText("Contrat :");
 
         jLabel33.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(51, 51, 51));
         jLabel33.setText("Metier :");
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(51, 51, 51));
         jLabel34.setText("Domaine :");
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(51, 51, 51));
         jLabel35.setText("Media :");
 
+        jTextField24.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField25.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField26.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField27.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField28.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton_ajouter_ajouter_anonceur5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur5.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_ajouter_anonceur5.setText("Ajouter");
         jButton_ajouter_ajouter_anonceur5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_ajouter_ajouter_anonceur5ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("jours");
-
-        jSpinner2.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, null, java.util.Calendar.WEEK_OF_MONTH));
-
-        jSpinner3.setModel(new javax.swing.SpinnerDateModel(new java.util.Date(), null, null, java.util.Calendar.MONTH));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox3ActionPerformed(evt);
-            }
-        });
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox4ActionPerformed(evt);
             }
         });
 
@@ -281,32 +289,27 @@ public class OffreForm extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jTextField17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                        .addComponent(jTextField18, javax.swing.GroupLayout.Alignment.LEADING))))
                             .addGroup(jPanel50Layout.createSequentialGroup()
                                 .addGap(3, 3, 3)
-                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addComponent(jLabel27)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel31)
                             .addComponent(jLabel22)
                             .addComponent(jLabel32)
                             .addComponent(jLabel29))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel50Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel50Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(72, 72, 72)
                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextField23)
@@ -322,10 +325,10 @@ public class OffreForm extends javax.swing.JPanel {
                                         .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 65, Short.MAX_VALUE)))
+                                        .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 75, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel50Layout.setVerticalGroup(
@@ -339,7 +342,7 @@ public class OffreForm extends javax.swing.JPanel {
                         .addGap(73, 73, 73)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)
@@ -352,31 +355,27 @@ public class OffreForm extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
-                        .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
                     .addGroup(jPanel50Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel50Layout.createSequentialGroup()
                                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel50Layout.createSequentialGroup()
                                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -384,12 +383,15 @@ public class OffreForm extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 30, Short.MAX_VALUE))))
+                            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 51, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
+                        .addComponent(jButton_ajouter_ajouter_anonceur5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -411,7 +413,8 @@ public class OffreForm extends javax.swing.JPanel {
 
         jTabbedPane22.addTab("Ajouter", jPanel3);
 
-        jPanel15.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel15.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel15.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel51.setBackground(new java.awt.Color(153, 153, 153));
@@ -419,45 +422,83 @@ public class OffreForm extends javax.swing.JPanel {
         jPanel51.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel24.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(51, 51, 51));
         jLabel24.setText("Offre");
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(51, 51, 51));
         jLabel36.setText("Intitulé :");
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(51, 51, 51));
         jLabel37.setText("référence :");
 
         jLabel38.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(51, 51, 51));
         jLabel38.setText("durée :");
 
         jLabel39.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(51, 51, 51));
         jLabel39.setText("date début :");
 
+        jTextField29.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField30.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel40.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(51, 51, 51));
         jLabel40.setText("date casting :");
 
+        jTextField31.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField32.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel41.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(51, 51, 51));
         jLabel41.setText("Localisation :");
 
+        jTextField33.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel42.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel42.setForeground(new java.awt.Color(51, 51, 51));
         jLabel42.setText("Description de l'offre :");
 
+        jTextField34.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel43.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel43.setForeground(new java.awt.Color(51, 51, 51));
         jLabel43.setText("Annonceur :");
 
+        jTextField35.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel44.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(51, 51, 51));
         jLabel44.setText("Contrat :");
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(51, 51, 51));
         jLabel45.setText("Metier :");
 
         jLabel46.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(51, 51, 51));
         jLabel46.setText("Domaine :");
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(51, 51, 51));
         jLabel47.setText("Media :");
 
+        jTextField36.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField37.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField38.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField39.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField40.setForeground(new java.awt.Color(51, 51, 51));
+
         jButton_ajouter_ajouter_anonceur10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur10.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_ajouter_anonceur10.setText("Modifier");
         jButton_ajouter_ajouter_anonceur10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -466,7 +507,10 @@ public class OffreForm extends javax.swing.JPanel {
         });
 
         jLabel52.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 51, 51));
         jLabel52.setText("Identifiant :");
+
+        jTextField41.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
         jPanel51.setLayout(jPanel51Layout);
@@ -572,7 +616,7 @@ public class OffreForm extends javax.swing.JPanel {
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE))
                     .addGroup(jPanel51Layout.createSequentialGroup()
                         .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -605,7 +649,7 @@ public class OffreForm extends javax.swing.JPanel {
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, 662, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -617,7 +661,7 @@ public class OffreForm extends javax.swing.JPanel {
 
         jTabbedPane22.addTab("Modifier", jPanel15);
 
-        jPanel16.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel16.setBackground(new java.awt.Color(51, 51, 51));
         jPanel16.setForeground(new java.awt.Color(153, 153, 153));
 
         jButton_ajouter_ajouter_anonceur7.setText("Lister");
@@ -627,10 +671,11 @@ public class OffreForm extends javax.swing.JPanel {
             }
         });
 
-        jPanel52.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel52.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel52.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel52.setForeground(new java.awt.Color(255, 255, 255));
 
+        jTable1.setForeground(new java.awt.Color(51, 51, 51));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null, null},
@@ -658,15 +703,15 @@ public class OffreForm extends javax.swing.JPanel {
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel52Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 639, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         jPanel52Layout.setVerticalGroup(
             jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel52Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 318, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -676,24 +721,22 @@ public class OffreForm extends javax.swing.JPanel {
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addGap(314, 314, 314)
                 .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel52, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(221, Short.MAX_VALUE))
+            .addComponent(jPanel52, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
                 .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(115, 115, 115)
+                .addGap(77, 77, 77)
                 .addComponent(jButton_ajouter_ajouter_anonceur7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane22.addTab("Lister", jPanel16);
 
-        jPanel17.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel17.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel17.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel54.setBackground(new java.awt.Color(153, 153, 153));
@@ -701,6 +744,7 @@ public class OffreForm extends javax.swing.JPanel {
         jPanel54.setForeground(new java.awt.Color(255, 255, 255));
 
         jButton_ajouter_ajouter_anonceur8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur8.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_ajouter_anonceur8.setText("Rechercher");
         jButton_ajouter_ajouter_anonceur8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -709,46 +753,86 @@ public class OffreForm extends javax.swing.JPanel {
         });
 
         jLabel48.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(51, 51, 51));
         jLabel48.setText("Offre");
 
         jLabel49.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(51, 51, 51));
         jLabel49.setText("Intitulé :");
 
         jLabel50.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(51, 51, 51));
         jLabel50.setText("référence :");
 
         jLabel51.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(51, 51, 51));
         jLabel51.setText("durée :");
 
         jLabel53.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(51, 51, 51));
         jLabel53.setText("date début :");
 
+        jTextField42.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField43.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel54.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(51, 51, 51));
         jLabel54.setText("date casting :");
 
+        jTextField44.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField45.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel55.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(51, 51, 51));
         jLabel55.setText("Localisation :");
 
+        jTextField46.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel56.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(51, 51, 51));
         jLabel56.setText("Description de l'offre :");
 
+        jTextField47.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel57.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(51, 51, 51));
         jLabel57.setText("Annonceur :");
 
+        jTextField48.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel58.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(51, 51, 51));
         jLabel58.setText("Contrat :");
 
         jLabel59.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(51, 51, 51));
         jLabel59.setText("Metier :");
 
         jLabel60.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(51, 51, 51));
         jLabel60.setText("Domaine :");
 
         jLabel61.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(51, 51, 51));
         jLabel61.setText("Media :");
 
+        jTextField49.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField50.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField51.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField52.setForeground(new java.awt.Color(51, 51, 51));
+
+        jTextField53.setForeground(new java.awt.Color(51, 51, 51));
+
         jLabel62.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(51, 51, 51));
         jLabel62.setText("Identifiant :");
+
+        jTextField66.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
         jPanel54.setLayout(jPanel54Layout);
@@ -769,11 +853,11 @@ public class OffreForm extends javax.swing.JPanel {
                             .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel54Layout.createSequentialGroup()
                                 .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(jTextField42, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                        .addComponent(jTextField43, javax.swing.GroupLayout.Alignment.LEADING)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField43, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
                                 .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel56)
                                     .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -782,7 +866,7 @@ public class OffreForm extends javax.swing.JPanel {
                             .addGroup(jPanel54Layout.createSequentialGroup()
                                 .addComponent(jLabel53)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel54Layout.createSequentialGroup()
                                 .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel57)
@@ -796,67 +880,64 @@ public class OffreForm extends javax.swing.JPanel {
                                 .addComponent(jLabel62)
                                 .addGap(18, 18, 18)
                                 .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(72, 72, 72)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel54Layout.createSequentialGroup()
-                                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel59))
+                                .addGap(102, 102, 102)
                                 .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel54Layout.createSequentialGroup()
-                                        .addGap(90, 90, 90)
-                                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel54Layout.createSequentialGroup()
+                                        .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel59)
+                                            .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                            .addGroup(jPanel54Layout.createSequentialGroup()
-                                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel58)
-                                    .addComponent(jLabel61, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel54Layout.createSequentialGroup()
+                                        .addComponent(jLabel58)
+                                        .addGap(24, 24, 24)
+                                        .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(126, 126, 126))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(4, 4, 4)))))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
         jPanel54Layout.setVerticalGroup(
             jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel54Layout.createSequentialGroup()
+                .addComponent(jLabel48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel54Layout.createSequentialGroup()
-                        .addComponent(jLabel48)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel54Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(44, 44, 44))
-                            .addGroup(jPanel54Layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)))
+                            .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField47, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel54Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(11, 11, 11))
+                        .addGap(7, 7, 7))
                     .addGroup(jPanel54Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)
-                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField48, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel54Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)))
+                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel54Layout.createSequentialGroup()
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -868,11 +949,11 @@ public class OffreForm extends javax.swing.JPanel {
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 7, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel54Layout.createSequentialGroup()
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField44, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -881,14 +962,17 @@ public class OffreForm extends javax.swing.JPanel {
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                         .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextField46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(7, 7, 7)
-                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel54Layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton_ajouter_ajouter_anonceur8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -911,7 +995,8 @@ public class OffreForm extends javax.swing.JPanel {
 
         jTabbedPane22.addTab("Rechercher", jPanel17);
 
-        jPanel18.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel18.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(186, 207, 226), 2));
         jPanel18.setForeground(new java.awt.Color(153, 153, 153));
 
         jPanel86.setBackground(new java.awt.Color(153, 153, 153));
@@ -919,10 +1004,14 @@ public class OffreForm extends javax.swing.JPanel {
         jPanel86.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel112.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(51, 51, 51));
         jLabel112.setText("Offre");
 
         jLabel113.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel113.setForeground(new java.awt.Color(51, 51, 51));
         jLabel113.setText("Id de l'offre :");
+
+        jTextField95.setForeground(new java.awt.Color(51, 51, 51));
 
         javax.swing.GroupLayout jPanel86Layout = new javax.swing.GroupLayout(jPanel86);
         jPanel86.setLayout(jPanel86Layout);
@@ -950,6 +1039,7 @@ public class OffreForm extends javax.swing.JPanel {
         );
 
         jButton_ajouter_ajouter_anonceur9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_ajouter_ajouter_anonceur9.setForeground(new java.awt.Color(51, 51, 51));
         jButton_ajouter_ajouter_anonceur9.setText("Supprimer");
         jButton_ajouter_ajouter_anonceur9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -964,7 +1054,7 @@ public class OffreForm extends javax.swing.JPanel {
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addGap(159, 159, 159)
                 .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(163, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -977,12 +1067,13 @@ public class OffreForm extends javax.swing.JPanel {
                 .addComponent(jPanel86, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jButton_ajouter_ajouter_anonceur9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(132, Short.MAX_VALUE))
         );
 
         jTabbedPane22.addTab("Supprimer", jPanel18);
 
         jButton_retour_ajouter_annonceur4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton_retour_ajouter_annonceur4.setForeground(new java.awt.Color(51, 51, 51));
         jButton_retour_ajouter_annonceur4.setText("Retour");
         jButton_retour_ajouter_annonceur4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -994,23 +1085,23 @@ public class OffreForm extends javax.swing.JPanel {
         jPanel_offre.setLayout(jPanel_offreLayout);
         jPanel_offreLayout.setHorizontalGroup(
             jPanel_offreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel_offreLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_offreLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(270, 270, 270))
+            .addGroup(jPanel_offreLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel_offreLayout.setVerticalGroup(
             jPanel_offreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_offreLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane22, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane22, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                .addGap(13, 13, 13))
+                .addComponent(jButton_retour_ajouter_annonceur4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -1050,22 +1141,6 @@ public class OffreForm extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton_ajouter_ajouter_anonceur10ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox4ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_ajouter_ajouter_anonceur10;
     private javax.swing.JButton jButton_ajouter_ajouter_anonceur5;
@@ -1073,12 +1148,7 @@ public class OffreForm extends javax.swing.JPanel {
     private javax.swing.JButton jButton_ajouter_ajouter_anonceur8;
     private javax.swing.JButton jButton_ajouter_ajouter_anonceur9;
     private javax.swing.JButton jButton_retour_ajouter_annonceur4;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JComboBox jComboBox2;
-    private javax.swing.JComboBox jComboBox3;
-    private javax.swing.JComboBox jComboBox4;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel22;
@@ -1134,15 +1204,19 @@ public class OffreForm extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel86;
     protected javax.swing.JPanel jPanel_offre;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
-    private javax.swing.JSpinner jSpinner3;
     private javax.swing.JTabbedPane jTabbedPane22;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
     private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
+    private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
+    private javax.swing.JTextField jTextField27;
     private javax.swing.JTextField jTextField28;
     private javax.swing.JTextField jTextField29;
     private javax.swing.JTextField jTextField30;
